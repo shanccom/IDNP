@@ -5,4 +5,7 @@
   #set par(justify: true)
 
   #include "3-conclusiones/conclusion-1.typ"
+  #include "3-conclusiones/conclusion-2.typ"
+  #include "3-conclusiones/conclusion-3.typ"
+  #include "3-conclusiones/conclusion-4.typ"
 ]
