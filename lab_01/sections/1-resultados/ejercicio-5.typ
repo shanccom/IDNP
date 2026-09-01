@@ -1,4 +1,6 @@
-= Plantea una idea sencilla de aplicación móvil que ayude a resolver una necesidad real, indicando: nombre de la app, problema que busca resolver, usuario al que está dirigida, funciones básicas y posible estructura de pantallas. Este ejercicio servirá como base para el trabajo de las siguientes unidades.
+= Pregunta 5:  Plantea una idea sencilla de aplicación móvil que ayude a resolver una necesidad real, indicando: nombre de la app, problema que busca resolver, usuario al que está dirigida, funciones básicas y posible estructura de pantallas. Este ejercicio servirá como base para el trabajo de las siguientes unidades.
+
+#v(1em)
 
   *Nombre de la app:* Medifácil
 
@@ -13,10 +15,14 @@
 
   *Estructura de pantallas:*
 
-  #table(
-    columns: 2,
-    align: (left, left),
-    [*Pantalla*], [*Descripción*],
+#let hc(body) = table.cell(fill: rgb("#708090"))[#text(fill: white)[#body]]
+
+#table(
+  columns: 2,
+  align: (left, left),
+  table.header(
+    [#hc[*Pantalla*]], [#hc[*Descripción*]],
+  ),
     [Panel principal (Paciente)], [Menú con opciones: Reservar cita, Mis citas, Historial, Pagos, Perfil.],
     [Dashboard(Médico)], [Menú con opciones: Agenda del día, Pacientes, Estadísticas, Configuración.],
     [Reservar cita], [Selección de especialidad, médico disponible y horario en calendario.],
