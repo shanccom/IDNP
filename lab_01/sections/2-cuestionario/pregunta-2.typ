@@ -1,0 +1,1 @@
+=  De los cinco elementos que conforman la estructura básica de una aplicación móvil (interfaz, lógica, eventos, navegación, datos), ¿cuál consideras más crítico para que la app funcione correctamente? Justifica tu respuesta.

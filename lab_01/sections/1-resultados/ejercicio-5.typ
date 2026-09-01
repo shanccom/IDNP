@@ -1,0 +1,1 @@
+= Plantea una idea sencilla de aplicación móvil que ayude a resolver una necesidad real, indicando: nombre de la app, problema que busca resolver, usuario al que está dirigida, funciones básicas y posible estructura de pantallas. Este ejercicio servirá como base para el trabjo de las siguientes unidades.
