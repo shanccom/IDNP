@@ -2,7 +2,7 @@
 #import "components/code-block.typ": code-block
 
 #show: unsa-report.with(
-  course_name: "Ingeniería de Software",
+  course_name: "Introducción al Desarrollo de Nuevas Plataformas",
   lab_title: "Título de la Práctica",
   lab_number: "01",
   instructor_name: "Nombre del Docente",

@@ -1,1 +1,3 @@
 =  De los cinco elementos que conforman la estructura básica de una aplicación móvil (interfaz, lógica, eventos, navegación, datos), ¿cuál consideras más crítico para que la app funcione correctamente? Justifica tu respuesta.
+
+De los cinco elementos que conforman la estructura basica de una aplicacion movil el que considero que es fundamental para q la app funciona correctamente es la logica, debido a que una app esta basada en la resolucion de un problema es decir que si no contamos con una logica adecuada lo que pasara es que o resolveremos dicho problema. Y esto no solo se basa en la arquitectura si no que tambien influye la capa de transporte y la manera en que se balancera la carga
