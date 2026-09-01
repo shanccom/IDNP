@@ -75,4 +75,9 @@ Las nuevas plataformas de desarrolllo, son entornos de desarrollo modernos que t
 
 == ¿Por qué es importante el desarrollo móvil en la actualidad?
 
-El desarrollo móvil en la actualidad es importante porque los dispositivos móviles se han convertido en una parte integral de la vida diaria de las personas. La El desarrollo movil en la actualidad es importante porque los dispositivos moviles se han convertido en una parte integral de la vida diaria de las personas. La mayoría de los usuarios acceden a internet y realizan diversas actividades a través de sus teléfonos inteligentes y tablets, lo que hace que las aplicaciones móviles sean esenciales para la comunicación, el comercio, la educación y el entretenimiento. Además, el desarrollo móvil permite a las empresas llegar a un público más amplio, mejorar la experiencia del usuario y mantenerse competitivas en un mercado cada vez más digitalizado.
+El desarrollo móvil en la actualidad es importante porque los dispositivos móviles se han convertido en el principal punto de acceso a Internet y la herramienta central de la vida cotidiana y profesional. La mayoría de los usuarios acceden a internet y realizan diversas actividades a través de sus  celulares y tablets, lo que hace que las aplicaciones móviles sean esenciales para la comunicación, el comercio, la educación y el entretenimiento. Además, el desarrollo móvil permite a las empresas llegar a un público más amplio, mejorar la experiencia del usuario y mantenerse competitivas en un mercado cada vez más digitalizado.
+
+#figure(
+  image("../../img/ejercicio1-Importancia.png", width: 80%),
+  caption: [Importancia del desarrollo móvil en la actualidad]
+)
