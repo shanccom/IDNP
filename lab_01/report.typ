@@ -5,7 +5,7 @@
   course_name: "Introducción al Desarrollo de Nuevas Plataformas",
   lab_title: "Introducción al desarrollo de aplicaciones móviles",
   lab_number: "01",
-  instructor_name: "Roxana Evelyn Limache Calatayud",
+  instructor_name: " - Roxana Evelyn Limache Calatayud",
   members: (
     "Hancco Mullisaca Sergio Danilo",
     "Huacani Jara Denise Andrea",

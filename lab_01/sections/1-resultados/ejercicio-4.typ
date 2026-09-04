@@ -21,3 +21,8 @@ Al investigar distintas aplicaciones móviles de uso frecuente, se seleccionaron
   [Google Docs], [Creación y colaboración de documentos], [Usuarios productivos, equipos], [Edición en tiempo real, comentarios, sugerencias], [Botón de compartir, barra de herramientas, sugerencias],
   [Zoom], [Videoconferencias y reuniones], [Profesionales, educadores, equipos], [Reuniones virtuales, compartición de pantalla, salas], [Botón de unirse, galería de participantes, barra de controles],
 )
+
+#figure(
+  image("../../img/ejercicio_4_apps.png", width: 80%),
+  caption: [Aplicaciones de uso frecuente]
+)
