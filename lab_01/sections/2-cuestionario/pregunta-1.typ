@@ -1,1 +1,10 @@
 = Pregunta 1:  ¿Cuál es la diferencia principal entre una aplicación nativa, una aplicación web y una aplicación híbrida? Menciona en qué situación elegirías cada una.
+#v(1em)
+
+La diferencia principal es en su método de desarrollo, ejecución y acceso al hardware: la aplicación nativa se diseña para un sistema operativo específico, requiere instalación desde tiendas y ofrece un rendimiento maximo con acceso total a las funciones del dispositivo (como camara, GPS, etc); la aplicación web se ejecuta desde un navegador sin necesidad de instalación ni uso de almacenamiento, es más económica pero con un rendimiento inferior y no tiene acceso directo al hardware; mientras que la aplicación híbrida combina ambas al usar tecnologías web empaquetadas en un contenedor nativo, esto permite instalarse desde tiendas y acceder a hardware utilizando un solo código base. El elegir una dependeria de el objetivo, en el caso de elegir una aplicacion nativa seria para
+
+- Aplicación Nativa: La elegiría para proyectos complejos que exigen el máximo rendimiento, la mejor experiencia de usuario y una integración profunda con la seguridad del dispositivo, como una aplicación de banca móvil que requiere autenticación por huella digital o reconocimiento facial.
+
+- Aplicación Web: La elegiría cuando el objetivo principal sea lanzar un Producto Viable Mínimo (MVP) de forma rápida y económica, o cuando se busca llegar a la mayor cantidad posible de usuarios sin obligarlos a descargar software o consumir espacio en sus dispositivos.
+
+- Aplicación Híbrida: La elegiría cuando se necesita presencia en las tiendas de aplicaciones y acceso a funciones nativas (como notificaciones push o ubicación), pero se cuenta con un presupuesto limitado y se requiere optimizar el tiempo de desarrollo utilizando un solo equipo y un código unificado.

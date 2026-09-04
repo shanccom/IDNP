@@ -1,3 +1,3 @@
 = Conclusión 1
 
-Contenido de la conclusión 1...
+En conclusion el desarrollo móvil actualmente se considera un pilar fundamental para la transformación digital al conectar de forma constante a los usuarios y optimizar sus tareas diarias. La evolución hacia nuevas plataformas de desarrollo como las herramientas con IA , multiplataforma, no-code, etc; donde facilitarian la creación de aplicaciones, que superarian a los entornos web o de escritorio en usabilidad y rendimiento al aprovechar directamente los recursos nativos del dispositivo. Es por eso que su importancia del desarrollo móvil se halla en la integración eficiente de sus componentes internos, los cuales procesan la información y coordinan la interfaz, los eventos y la navegación con el fin de resolver un problema real del mercado.
