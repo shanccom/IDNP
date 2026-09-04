@@ -1,15 +1,15 @@
 = Ejercicio 2: Elabora un cuadro comparativo entre aplicación móvil, aplicación web y aplicación de escritorio, considerando al menos: dispositivo donde se ejecuta, conexión a internet, instalación, acceso a recursos del equipo y ejemplos.
-#v(10pt)
-#table(
-  columns: (90pt, 1fr, 1fr, 1fr),
-  align: (left, left, left, left),
-  stroke: 0.5pt,
-  inset: 8pt,
 
-  [*Característica*],
-  [*Aplicación Móvil*],
-  [*Aplicación Web*],
-  [*Aplicación de Escritorio*],
+#v(1em)
+
+#let hc(body) = table.cell(fill: rgb("#708090"))[#text(fill: white)[#body]]
+
+#table(
+  columns: (1fr, 1.2fr, 1.2fr, 1.2fr),
+  align: left,
+  table.header(
+    [#hc[Característica]], [#hc[Aplicación Móvil]], [#hc[Aplicación Web]], [#hc[Aplicación de Escritorio]],
+  ),
 
   [*Entorno de ejecución*],
   [En sistema operativo movil como iOS Android.],
