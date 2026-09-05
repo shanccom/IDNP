@@ -1,3 +1,3 @@
 = Conclusión 3
 
-Contenido de la conclusión 3...
+El estudio de la arquitectura móvil nos demuestra que, aunque la interfaz y la navegación son la cara visible hacia el usuario, es la lógica del sistema la que determina el funcionamiento real de la aplicación. Sin un diseño lógico sólido que interprete los eventos y gestione los datos, los demás componentes carecerían de sentido y no podrían resolver la necesidad para la cual fue concebida la app.

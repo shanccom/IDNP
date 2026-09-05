@@ -1,3 +1,3 @@
 = Conclusión 2
 
-Contenido de la conclusión 2...
+El análisis comparativo entre aplicaciones móviles, web y de escritorio, y la diferenciación entre desarrollo nativo, híbrido y web, nos demuestra que no existe una solución única para todos los proyectos. La elección de la arquitectura mas adecuada depende fundamentalmente del rendimiento requerido, la necesidad de trabajar sin conexión, el presupuesto disponible y el nivel de acceso al hardware del dispositivo

@@ -4,6 +4,10 @@
   #show heading: set text(weight: "bold")
   #set par(justify: true)
 
-  #include "2-cuestionario/pregunta-1.typ"
-  #include "2-cuestionario/pregunta-2.typ"
+  = II. CUESTIONARIO
+
+  #pad(left: 1.3em, right: 1.1em)[
+    #include "2-cuestionario/pregunta-1.typ"
+    #include "2-cuestionario/pregunta-2.typ"
+  ]
 ]

@@ -1,4 +1,4 @@
-= Ejercicio 5:  Plantea una idea sencilla de aplicación móvil que ayude a resolver una necesidad real, indicando: nombre de la app, problema que busca resolver, usuario al que está dirigida, funciones básicas y posible estructura de pantallas. Este ejercicio servirá como base para el trabajo de las siguientes unidades.
+= Ejercicio 5: Plantea una idea sencilla de aplicación móvil que ayude a resolver una necesidad real, indicando: nombre de la app, problema que busca resolver, usuario al que está dirigida, funciones básicas y posible estructura de pantallas. Este ejercicio servirá como base para el trabajo de las siguientes unidades.
 
 #v(1em)
 
@@ -17,27 +17,24 @@
 
 #let hc(body) = table.cell(fill: rgb("#708090"))[#text(fill: white)[#body]]
 
-#table(
-  columns: 2,
-  align: (left, left),
-  table.header(
-    [#hc[*Pantalla*]], [#hc[*Descripción*]],
-  ),
-    [Panel principal (Paciente)], [Menú con opciones: Reservar cita, Mis citas, Historial, Pagos, Perfil.],
-    [Dashboard(Médico)], [Menú con opciones: Agenda del día, Pacientes, Estadísticas, Configuración.],
-    [Reservar cita], [Selección de especialidad, médico disponible y horario en calendario.],
-    [Detalle de cita], [Información completa de la cita: médico, fecha, hora, motivo y estado.],
-    [Historial clínico], [Lista de consultas anteriores con diagnóstico, tratamiento y notas.],
-    [Chat], [Conversación directa médico-paciente con opción de enviar archivos.],
-    [Perfil], [Datos personales, configuración de notificaciones y preferencias.],
-  )
+#align(center)[
+  #table(
+    columns: 2,
+    align: (left, left),
+    table.header(
+      [#hc[*Pantalla*]], [#hc[*Descripción*]],
+    ),
+      [Panel principal (Paciente)], [Menú con opciones: Reservar cita, Mis citas, Historial, Pagos, Perfil.],
+      [Dashboard(Médico)], [Menú con opciones: Agenda del día, Pacientes, Estadísticas, Configuración.],
+      [Reservar cita], [Selección de especialidad, médico disponible y horario en calendario.],
+      [Detalle de cita], [Información completa de la cita: médico, fecha, hora, motivo y estado.],
+      [Historial clínico], [Lista de consultas anteriores con diagnóstico, tratamiento y notas.],
+      [Chat], [Conversación directa médico-paciente con opción de enviar archivos.],
+      [Perfil], [Datos personales, configuración de notificaciones y preferencias.],
+    )
+]
 
   #figure(
-    image("../../img/MediFacil.png", width: 27%),
+    image("../../img/ejercicio_5_prototipo.png", width: 80%),
     caption: [Mockup de la aplicación Medifácil]
-  )
-
-  #figure(
-    image("../../img/MediFacil_Agenda.png", width: 27%),
-    caption: [Mockup de la aplicacion Medifacil la parte de Agenda]
   )

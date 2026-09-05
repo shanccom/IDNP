@@ -1,10 +1,34 @@
 = Pregunta 1:  ¿Cuál es la diferencia principal entre una aplicación nativa, una aplicación web y una aplicación híbrida? Menciona en qué situación elegirías cada una.
 #v(1em)
 
-La diferencia principal es en su método de desarrollo, ejecución y acceso al hardware: la aplicación nativa se diseña para un sistema operativo específico, requiere instalación desde tiendas y ofrece un rendimiento maximo con acceso total a las funciones del dispositivo (como camara, GPS, etc); la aplicación web se ejecuta desde un navegador sin necesidad de instalación ni uso de almacenamiento, es más económica pero con un rendimiento inferior y no tiene acceso directo al hardware; mientras que la aplicación híbrida combina ambas al usar tecnologías web empaquetadas en un contenedor nativo, esto permite instalarse desde tiendas y acceder a hardware utilizando un solo código base. El elegir una dependeria de el objetivo, en el caso de elegir una aplicacion nativa seria para
+La diferencia principal radica en la tecnologia utilizada para su desarrollo y la forma en que interactuan con el dispositivo movil.
 
-- Aplicación Nativa: La elegiría para proyectos complejos que exigen el máximo rendimiento, la mejor experiencia de usuario y una integración profunda con la seguridad del dispositivo, como una aplicación de banca móvil que requiere autenticación por huella digital o reconocimiento facial.
+Una *aplicacion nativa* esta desarrollada especificamente para una plataforma (iOS o Android) utilizando los lenguajes propios de cada sistema (Swift/Kotlin). Ofrece el mejor rendimiento, acceso completo al hardware del dispositivo y una experiencia de usuario optimizada, pero implica un mayor costo de desarrollo ya que se necesita crear una version separada para cada plataforma.
 
-- Aplicación Web: La elegiría cuando el objetivo principal sea lanzar un Producto Viable Mínimo (MVP) de forma rápida y económica, o cuando se busca llegar a la mayor cantidad posible de usuarios sin obligarlos a descargar software o consumir espacio en sus dispositivos.
+Una *aplicacion web* se accede desde el navegador del dispositivo y esta construida con tecnologias web standard (HTML, CSS, JavaScript). Es multiplataforma por defecto, no requiere instalacion y su mantenimiento es mas sencillo, pero tiene limitaciones en cuanto a rendimiento, acceso a funcionalidades del dispositivo (camara, GPS, notificaciones) y depende de la conexion a internet.
 
-- Aplicación Híbrida: La elegiría cuando se necesita presencia en las tiendas de aplicaciones y acceso a funciones nativas (como notificaciones push o ubicación), pero se cuenta con un presupuesto limitado y se requiere optimizar el tiempo de desarrollo utilizando un solo equipo y un código unificado.
+Una *aplicacion hibrida* combina ambos enfoques: utiliza tecnologias web pero se empaqueta como una aplicacion nativa mediante frameworks como Flutter o React Native. Permite un solo codigo fuente para multiples plataformas con acceso intermedio al hardware, equilibrando costo de desarrollo y funcionalidad.
+
+En cuanto a las situaciones en las que elegiria cada una:
+- *Nativa*: cuando se requiere alto rendimiento, acceso completo al hardware (juegos, apps de realidad augmentada) o una experiencia de usuario muy pulida.
+- *Web*: cuando se busca alcance inmediato sin necesidad de publicacion en tiendas, como portales informativos, herramientas internas o prototipos rapidos.
+- *Hibrida*: cuando se necesita presencia en ambas plataformas con recursos limitados, como aplicaciones de servicios, redes sociales o comercio electronico.
+
+#let hc(body) = table.cell(fill: rgb("#708090"))[#text(fill: white)[#body]]
+
+#align(center)[
+  #table(
+    columns: 4,
+    align: (left, left, left, left),
+    table.header(
+      [#hc[*Caracteristica*]], [#hc[*Nativa*]], [#hc[*Web*]], [#hc[*Hibrida*]],
+    ),
+    [Rendimiento], [Alto], [Dependiente del navegador], [Medio-Alto],
+    [Acceso a hardware], [Completo], [Muy limitado], [Parcial],
+    [Costo de desarrollo], [Alto (2 codebases)], [Bajo (1 codebase)], [Medio (1 codebase)],
+    [Plataformas], [Una por version], [Todas], [Todas],
+    [Instalacion], [Requerida (tienda)], [No requerida], [Requerida (tienda)],
+    [Experiencia de usuario], [Optima], [Basica], [Buena],
+    [Ejemplos], [Instagram, Spotify], [Gmail web, Wikipedia], [Uber, Airbnb],
+  )
+]
