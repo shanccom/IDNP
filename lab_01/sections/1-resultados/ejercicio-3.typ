@@ -28,5 +28,5 @@ Los datos son la información que la app guarda y gestiona. En Spotify se almace
 
 #figure(
   image("../../img/ejercicio3-spotify.png", width: 100%),
-  caption: [Importancia del desarrollo móvil en la actualidad]
+  caption: [Resumen de los 5 elementos]
 )
