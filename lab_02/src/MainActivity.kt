@@ -42,9 +42,11 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // START-SNIPPET,main_activity
         setContent {
             RegistroLibro()
         }
+        // END-SNIPPET
     }
 }
 
