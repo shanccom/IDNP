@@ -7,7 +7,7 @@
   1. Se inició Android Studio y se creó un nuevo proyecto con la plantilla Empty Activity (Jetpack Compose) en lenguaje Kotlin, esperando a que Gradle finalice la sincronización
 
     #figure(
-      image("../../img/prop2-1.png", width: 80%),
+      image("../../img/prop2-1.png", width: 60%),
       caption: [Hello Android],
     ) <hello-android>
 
@@ -22,7 +22,7 @@
   3. Volver a ejecutar Run y verificar que el emulador ahora muestra el saludo personalizado.
 
     #figure(
-      image("../../img/prop2-3.png", width: 80%),
+      image("../../img/prop2-3.png", width: 60%),
       caption: [Hello Denise],
     ) <hello-sergio>
 ]

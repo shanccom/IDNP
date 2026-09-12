@@ -27,5 +27,9 @@
     #include "1-resultados/propuesta2_ejercicio-1.typ"
     #v(0.5em)
     #include "1-resultados/propuesta2_ejercicio-2.typ"
+    #v(0.5em)
+    #include "1-resultados/propuesta2_ejercicio-3.typ"
+    #v(0.5em)
+    #include "1-resultados/propuesta2_ejercicio-4.typ"
   ]
 ]
