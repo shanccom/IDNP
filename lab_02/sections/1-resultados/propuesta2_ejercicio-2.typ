@@ -60,7 +60,7 @@
     Al ejecutar la aplicación en el emulador de Android, se observa la interfaz completa con los tres campos de texto, el icono temático y los dos botones solicitados:
 
     #figure(
-      image("../../img/prop2-pantalla-campos.png", width: 50%),
+      image("../../img/prop2-pantalla-campos.png", width: 30%),
       caption: [Pantalla con los tres campos de texto y botones de acción en Jetpack Compose],
     ) <pantalla-registro-prop2>
   ]
