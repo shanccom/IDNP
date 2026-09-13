@@ -4,5 +4,8 @@
   #show heading: set text(weight: "bold")
   #set par(justify: true)
 
-  #include "3-conclusiones/conclusion-1.typ"
+  = III. CONCLUSIONES Y RECOMENDACIONES
+  #pad(1.1em)[
+    #include "3-conclusiones/conclusion-1.typ"
+  ]
 ]
