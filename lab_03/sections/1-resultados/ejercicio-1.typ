@@ -1,3 +1,1 @@
-= Ejercicio 1
-
-Contenido del ejercicio 1...
+== Ejercicio 1: Agrega una tercera pantalla, HomeScreen(usuario), registrada en el NavHost con la ruta "home", que reciba el nombre del usuario como argumento de navegación (por ejemplo navController.navigate("home/usuario")) y lo muestre en el mensaje "Bienvenido <usuario>".

@@ -1,0 +1,1 @@
+== Ejercicio 3: En LoginScreen, al presionar "Ingresar", busca una coincidencia en el archivo cuentas.txt (en lugar de la lista en memoria usada en el ejercicio resuelto). Si existe, navega a HomeScreen; si no, muestra el mensaje "Cuenta no encontrada".
