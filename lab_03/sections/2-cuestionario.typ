@@ -7,5 +7,7 @@
   = CUESTIONARIO
   #pad(1.1em)[
     #include "2-cuestionario/pregunta-1.typ"
+    #v(0.5em)
+    #include "2-cuestionario/pregunta-2.typ"
   ]
 ]

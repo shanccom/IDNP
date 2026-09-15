@@ -8,5 +8,7 @@
   #pad(1.1em)[
    #include "1-resultados/ejercicio-1.typ"
    #include "1-resultados/ejercicio-2.typ"
+   #include "1-resultados/ejercicio-3.typ"
+   #include "1-resultados/ejercicio-4.typ"
   ]
 ]
