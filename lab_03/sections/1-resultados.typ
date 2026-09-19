@@ -6,6 +6,9 @@
 
   = EJERCICIOS/PROBLEMAS PROPUESTOS
   #pad(1.1em)[
+
+    - Link Repositorio (Denise): https://github.com/DeniseHuacani/IDNP-LABORATORIO/tree/main/lab03
+
   == Propuesta 1
    #include "1-resultados/ejercicio-1.typ"
    #include "1-resultados/ejercicio-2.typ"
