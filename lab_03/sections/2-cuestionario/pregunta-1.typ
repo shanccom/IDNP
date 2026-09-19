@@ -1,5 +1,6 @@
 == Pregunta 1: ¿Qué ventajas tiene usar Navigation Compose (una sola Activity con varias pantallas) frente al enfoque tradicional de múltiples Activities comunicadas por Intent?
 
+#pad(1.1em)[
 #v(0.5em)
 
   Las principales ventajas son:
@@ -9,3 +10,4 @@
   - Back stack más flexible: Navigation gestiona la pila de retroceso de forma más controlable.
   - Patrón unificado: todo se desarrolla en Compose, sin alternar entre intents y callbacks.
   - Mejor rendimiento: no hay sobrecarga de crear o destruir múltiples Activities.
+]
