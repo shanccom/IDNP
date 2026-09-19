@@ -2,10 +2,10 @@
 #import "components/code-block.typ": code-block
 
 #show: unsa-report.with(
-  course_name: "Ingeniería de Software",
-  lab_title: "Título de la Práctica",
-  lab_number: "01",
-  instructor_name: "Nombre del Docente",
+  course_name: "INTRODUCCION AL DESARROLLO DE NUEVAS PLATAFORMAS (E)",
+  lab_title: "Navegación entre pantallas: inicio de sesión y registro con Jetpack Compose",
+  lab_number: "03",
+  instructor_name: "Roxana Evelyn Limache Calatayud",
   members: (
     "Hancco Mullisaca, Sergio Danilo ",
     "Huacani Jara, Denise Andrea ",
