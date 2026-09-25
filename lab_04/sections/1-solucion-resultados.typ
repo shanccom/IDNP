@@ -9,7 +9,6 @@
       #v(0.6em)
       #include "ejercicios/ejercicio-2.typ"
       #v(0.6em)
-      #include "ejercicios/ejercicio-3.typ"
     ]
   ],
   [
