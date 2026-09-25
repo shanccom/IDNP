@@ -14,8 +14,16 @@
         #v(0.6em)
         #include "ejercicios/ejercicio-3.typ"
         #v(0.6em)
-        #include "ejercicios/pr2-ejercicio4.typ"
         = PROPUESTA 2
+        #v(0.6em)
+        #include "ejercicios/pr2-ejercicio1.typ"
+        #v(0.6em)
+        #include "ejercicios/pr2-ejercicio2.typ"
+        #v(0.6em)
+        #include "ejercicios/pr2-ejercicio3.typ"
+        #v(0.6em)
+        #include "ejercicios/pr2-ejercicio4.typ"
+
       ]
     ]
   ],
