@@ -4,7 +4,10 @@
   "SOLUCIÓN Y RESULTADOS",
   [
     #pad(left: 0.5em, top: 0.5em)[
-    #block(text(weight: "bold")[I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS], below: 0.8em)
+
+      Link Repositorio: https://github.com/shanccom/IDNP_Repo/tree/main/lab_04_Battery/BatteryMonitor_Compose
+
+      #block(text(weight: "bold")[I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS], below: 0.8em)
       #include "ejercicios/ejercicio-1.typ"
       #v(0.6em)
       #include "ejercicios/ejercicio-2.typ"
