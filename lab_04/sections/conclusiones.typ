@@ -1,3 +1,3 @@
-- Redacta aquí la primera conclusión de la práctica.
-- Redacta aquí la segunda conclusión de la práctica.
-- Redacta aquí la tercera conclusión de la práctica.
+- El uso de `DisposableEffect` en Jetpack Compose vincula de manera segura el ciclo de vida de los `BroadcastReceiver` a la composición, garantizando el registro y desregistro automático en `onDispose` para evitar fugas de memoria.
+- La combinación de receptores para eventos del sistema (`ACTION_BATTERY_CHANGED`) y acciones personalizadas enviadas mediante `PendingIntent` permite alternar entre monitoreo reactivo automático y consultas puntuales bajo demanda.
+- La lectura de extras como `EXTRA_LEVEL`, `EXTRA_SCALE` y `EXTRA_STATUS` a través de broadcasts pegajosos (*sticky broadcasts*) permite obtener el estado completo del hardware (nivel y estado de carga) de forma eficiente.

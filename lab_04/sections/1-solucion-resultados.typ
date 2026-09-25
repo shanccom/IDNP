@@ -14,7 +14,7 @@
         #v(0.6em)
         #include "ejercicios/ejercicio-3.typ"
         #v(0.6em)
-        #include "ejercicios/ejercicio-4.typ"
+        #include "ejercicios/pr2-ejercicio4.typ"
         = PROPUESTA 2
       ]
     ]
@@ -38,6 +38,3 @@
     ]
   ],
 )
-
-
-debo desarrollar, 
