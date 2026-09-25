@@ -6,7 +6,9 @@
   lab_number: "04",
   instructor_name: "Roxana Evelyn Limache Calatayud",
   members: (
-    "Hancco Mullisaca Sergio Danilo",
+    "Hancco Mullisaca, Sergio Danilo ",
+    "Huacani Jara, Denise Andrea ",
+
   ),
 )
 
