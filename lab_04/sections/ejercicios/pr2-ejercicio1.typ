@@ -1,5 +1,18 @@
+= Ejercicio Propuesto: Actualización manual del porcentaje de batería con broadcast personalizado
 
-== Ejercicio 1: Agrega un botón "Actualizar manualmente" a BatteryScreen. Al presionarlo, en vez de esperar el evento del sistema, dispara un broadcast personalizado: crea un Intent con una acción propia (por ejemplo "com.tuapp.ACTUALIZAR_BATERIA"), envuélvelo en un PendingIntent.getBroadcast(...), y actívalo con PendingIntent.send().
+== Enunciado
+
+Tomando como referencia el ejercicio resuelto por el docente, agregar una segunda forma de actualizar el porcentaje de batería, disparada manualmente en lugar de por el evento automático del sistema:
+
+1. Agregar un botón "Actualizar manualmente" a `BatteryScreen` que cree un `Intent` con una acción propia (`com.tuapp.ACTUALIZAR_BATERIA`), lo envuelva en un `PendingIntent.getBroadcast(...)` y lo active con `PendingIntent.send()`.
+2. Implementar un segundo `BroadcastReceiver` que escuche esa acción personalizada y, al recibirla, vuelva a leer el estado de la batería y actualice el mismo estado en pantalla.
+3. Registrar y desregistrar este segundo receiver siguiendo el mismo patrón de `DisposableEffect` usado en el ejercicio resuelto.
+4. *(Reto opcional)* Mostrar en pantalla, además del porcentaje, si la batería se está cargando o no, usando `EXTRA_STATUS` del `Intent` original.
+
+== Desarrollo y Solución Paso a Paso
+
+
+=== Paso 1: Agrega un botón "Actualizar manualmente" a BatteryScreen. Al presionarlo, en vez de esperar el evento del sistema, dispara un broadcast personalizado: crea un Intent con una acción propia (por ejemplo "com.tuapp.ACTUALIZAR_BATERIA"), envuélvelo en un PendingIntent.getBroadcast(...), y actívalo con PendingIntent.send().
 #pad(1.1em)[
 
 
@@ -75,7 +88,7 @@
         Al ejecutar el proyecto se muestra el botón "Actualizar manualmente" debajo del texto de porcentaje. Presionarlo no produce aún ningún cambio visible en pantalla (porque todavía no existe el receiver que escuche esta acción), pero en Logcat puede confirmarse que el broadcast se envía sin errores:
 
         #figure(
-        image("../../img/ejercicios/ej1.png", width: 40%),
+        image("../../img/propuesta2/ej1.png", width: 40%),
         caption: [Botón "Actualizar manualmente" agregado a `BatteryScreen`],
         ) <boton-actualizar>
     ]

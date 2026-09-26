@@ -7,12 +7,16 @@
 
     #block(text(weight: "bold")[I. SOLUCIÓN DE EJERCICIOS PROPUESTOS], below: 0.8em)
       #pad(1.1em)[
-        = PROPUESTA 1
+
+    - Link Repositorio (Propuesta 1): 
+    - Link Repositorio (Propuesta 2): 
+
+
+        
         #include "ejercicios/ejercicio-1.typ"
         #v(0.6em)
+        = PROPUESTA 1
         #include "ejercicios/ejercicio-2.typ"
-        #v(0.6em)
-        #include "ejercicios/ejercicio-3.typ"
         #v(0.6em)
         = PROPUESTA 2
         #v(0.6em)

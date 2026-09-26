@@ -1,4 +1,4 @@
-== Ejercicio 3: Registra y desregistra este segundo receiver siguiendo el mismo patrón de DisposableEffect usado en el ejercicio resuelto.
+=== Paso 3: Registra y desregistra este segundo receiver siguiendo el mismo patrón de DisposableEffect usado en el ejercicio resuelto.
 
 #v(0.5em)
 
@@ -48,7 +48,7 @@ En este ejercicio se activa el `receiverManual` definido en el Ejercicio 2, regi
     En Logcat, filtrando por la etiqueta "BatteryScreen", se observan los mensajes "Receiver manual registrado" al entrar a la pantalla, "Actualización manual recibida" cada vez que se presiona el botón, y "Receiver manual desregistrado" al salir:
 
     #figure(
-      image("../../img/ejercicios/ej3.png", width: 100%),
+      image("../../img/propuesta2/ej3.png", width: 100%),
       caption: [Logcat mostrando registro, actualización manual y desregistro del segundo receiver],
     ) <logcat-manual>
   ]

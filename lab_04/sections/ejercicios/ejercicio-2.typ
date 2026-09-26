@@ -1,4 +1,4 @@
-= Ejercicio 2: Actualización manual del porcentaje de batería con broadcast personalizado
+= Ejercicio Propuesto : Actualización manual del porcentaje de batería con broadcast personalizado
 
 == Enunciado
 

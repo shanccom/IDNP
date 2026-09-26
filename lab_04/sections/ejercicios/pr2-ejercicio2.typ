@@ -1,5 +1,5 @@
 
-== Ejercicio 2: Implementa un segundo BroadcastReceiver (o reutiliza el mismo patrón) que escuche esa acción personalizada y, al recibirla, vuelva a leer el estado de la batería (por ejemplo con BatteryManager) y actualice el mismo estado en pantalla.
+=== Paso 2: Implementa un segundo BroadcastReceiver (o reutiliza el mismo patrón) que escuche esa acción personalizada y, al recibirla, vuelva a leer el estado de la batería (por ejemplo con BatteryManager) y actualice el mismo estado en pantalla.
 
 #pad(1.1em)[
 
@@ -51,7 +51,7 @@
         #v(0.5em)
     ]
     #figure(
-        image("../../img/ejercicios/ej2.png", width: 100%),
+        image("../../img/propuesta2/ej2.png", width: 100%),
         caption: [Segundo `BroadcastReceiver` implementado],
     ) <receiver-manual>
 

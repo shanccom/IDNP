@@ -1,4 +1,4 @@
-= Ejercicio 1: Monitoreo de batería con BroadcastReceiver en Jetpack Compose
+= Ejercicio Resuelto: Monitoreo de batería con BroadcastReceiver en Jetpack Compose
 
 == Enunciado
 
@@ -42,14 +42,16 @@ fun BatteryScreen(modifier: Modifier = Modifier) {
 - *Estado optimizado:* `mutableIntStateOf(0)` previene el autoboxing de tipos primitivos en recomposiciones frecuentes.
 
 === 3. Evidencias de Ejecución y Pruebas
-Se validó el comportamiento reactivo en tiempo real modificando el nivel de batería desde el emulador:
+Se validó el comportamiento reactivo en tiempo real modificando el nivel de batería desde el emulador en los entornos de desarrollo de ambos integrantes del equipo:
+
+*Pruebas de Integrante 1 *
 
 #grid(
   columns: (1fr, 1fr),
   gutter: 0.8em,
   figure(
     image("../../img/ejercicio1-ejecucion-100.png", width: 95%),
-    caption: [Ejecución inicial con nivel al 100%.],
+    caption: [Ejecución inicial al 100%.],
   ),
   figure(
     image("../../img/ejercicio1-simulacion-50.png", width: 95%),
@@ -70,6 +72,33 @@ Se validó el comportamiento reactivo en tiempo real modificando el nivel de bat
   ),
 )
 
+*Pruebas de Integrante 2 *
+
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 0.8em,
+  figure(
+    image("../../img/propuesta2/100.png", width: 95%),
+    caption: [Ejecución inicial al 100%.],
+  ),
+  figure(
+    image("../../img/propuesta2/57.png", width: 95%),
+    caption: [Simulación de nivel al 57%.],
+  ),
+)
+
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 0.8em,
+  figure(
+    image("../../img/propuesta2/20.png", width: 95%),
+    caption: [Simulación de nivel crítico al 20%.],
+  ),
+  figure(
+    image("../../img/propuesta2/7.png", width: 95%),
+    caption: [Simulacion de nivel al 7%.],
+  ),
+)
 
 == Modificaciones para Warnings y Buenas Prácticas
 

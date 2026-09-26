@@ -1,4 +1,4 @@
-== Ejercicio 4 (Reto opcional): Muestra en pantalla, además del porcentaje, si la batería se está cargando o no, usando EXTRA_STATUS del Intent original.
+=== Paso 4 (Reto opcional): Muestra en pantalla, además del porcentaje, si la batería se está cargando o no, usando EXTRA_STATUS del Intent original.
 
 #v(0.5em)
 
@@ -74,8 +74,14 @@ En este ejercicio se agrega una segunda variable de estado que indica si el disp
     Desde Extended Controls > Battery del emulador, al cambiar el "Charge state" entre `Charging` y `Discharging`, el texto de estado cambia automáticamente entre "Estado: Cargando" y "Estado: No cargando", tanto por el evento del sistema como al presionar "Actualizar manualmente":
 
     #figure(
-      image("../../img/ejercicios/ej1.png", width: 40%),
-      caption: [Pantalla mostrando porcentaje y estado de carga de la batería],
+      image("../../img/propuesta2/ej4-1.png", width: 90%),
+      caption: [Pantalla mostrando porcentaje y estado de carga "NO CARGANDO"],
     ) <estado-carga>
+
+    #figure(
+      image("../../img/propuesta2/ej4-2.png", width: 90%),
+      caption: [Pantalla mostrando porcentaje y estado de carga "CARGANDO"],
+    ) <estado-carga-2>
+
   ]
 ]
