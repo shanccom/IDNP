@@ -9,7 +9,7 @@
       #pad(1.1em)[
 
     - Link Repositorio (Propuesta 1): 
-    - Link Repositorio (Propuesta 2): 
+    - Link Repositorio (Propuesta 2): https://github.com/DeniseHuacani/IDNP-LABORATORIO/tree/main/lab04/BatteryMonitor_Compose
 
 
         
