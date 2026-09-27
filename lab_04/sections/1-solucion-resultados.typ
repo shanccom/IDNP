@@ -8,11 +8,11 @@
     #block(text(weight: "bold")[I. SOLUCIÓN DE EJERCICIOS PROPUESTOS], below: 0.8em)
       #pad(1.1em)[
 
-    - Link Repositorio (Propuesta 1): 
+    - Link Repositorio (Propuesta 1): https://github.com/shanccom/IDNP_Repo/tree/main/lab_04_Battery/BatteryMonitor_Compose
     - Link Repositorio (Propuesta 2): https://github.com/DeniseHuacani/IDNP-LABORATORIO/tree/main/lab04/BatteryMonitor_Compose
 
 
-        
+
         #include "ejercicios/ejercicio-1.typ"
         #v(0.6em)
         = PROPUESTA 1
@@ -47,6 +47,12 @@
     #pad(left: 0.5em, top: 0.5em)[
       #block(text(weight: "bold")[III. CONCLUSIONES], below: 0.8em)
       #include "conclusiones.typ"
+    ]
+  ],
+  [
+    #pad(left: 0.5em, top: 0.5em)[
+      #block(text(weight: "bold")[IV. RECOMENDACIONES], below: 0.8em)
+      #include "recomendaciones.typ"
     ]
   ],
 )
