@@ -6,7 +6,7 @@
   lab_number: "01",
   instructor_name: "Nombre del Docente",
   members: (
-    "Nombre del Estudiante",
+    "Hancco Mullisaca Sergio Danilo",
   ),
 )
 

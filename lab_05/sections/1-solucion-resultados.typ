@@ -5,11 +5,13 @@
   [
     #pad(left: 0.5em, top: 0.5em)[
     #block(text(weight: "bold")[I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS], below: 0.8em)
+      Link (Propuesta 1): https://github.com/shanccom/IDNP_Repo/tree/main/lab_05_CampusNavigator_Compose/CampusNavigator_Composes
+
       #include "ejercicios/ejercicio-1.typ"
       #v(0.6em)
       #include "ejercicios/ejercicio-2.typ"
-      #v(0.6em)
-      #include "ejercicios/ejercicio-3.typ"
+
+
     ]
   ],
   [
