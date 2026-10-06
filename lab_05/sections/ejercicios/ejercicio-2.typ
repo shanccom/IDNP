@@ -1,4 +1,3 @@
-= EJERCICIOS/PROBLEMAS PROPUESTOS
 
 // Código en tamaño reducido para esta sección
 #let code-size = 6.4pt
@@ -36,14 +35,23 @@
   text(size: 7.6pt)[#body],
 )
 
-== Pasos:
-1. Crea una clase SeleccionViewModel : ViewModel() con una propiedad mutableStateOf<String> (o
-StateFlow) para almacenar el edificio seleccionado.
+== Enunciado
+
+Tomando como referencia el ejercicio resuelto por el docente, reemplaza la comunicación por lambda entre Edificios y Home por un ViewModel compartido, y agrega una cuarta pestaña:
+#pad(1.1em)[
+
++ Crea una clase `SeleccionViewModel : ViewModel()` con una propiedad `mutableStateOf<String>` (o `StateFlow`) para almacenar el edificio seleccionado.
++ Obtén una única instancia de `SeleccionViewModel` con `viewModel()` en el Composable raíz y pásala a `EdificiosScreen` y a `HomeScreen` (en lugar de la lambda del ejercicio resuelto).
++ En `EdificiosScreen`, al seleccionar un edificio, actualiza directamente el valor en el ViewModel en vez de invocar una función lambda.
++ En `HomeScreen`, lee el valor del ViewModel (con `collectAsState()` si usaste `StateFlow`) y muéstralo, verificando que el comportamiento visual sea el mismo que con la lambda.
++ Agrega una cuarta pestaña "Perfil" (u otra que prefieras) con un Composable simple de marcador de posición, y su `NavigationBarItem` correspondiente.
+]
+= Propuesta 1 
+
+== Paso 1 : Crea una clase SeleccionViewModel : ViewModel() con una propiedad mutableStateOf (o StateFlow) para almacenar el edificio seleccionado.
 
    #desarrollo[
-     Se creó el archivo `viewmodel/SeleccionViewModel.kt` con la clase `SeleccionViewModel :
-     ViewModel()`, que expone el edificio seleccionado tanto con `mutableStateOf` (con `private
-     set`) como con un `StateFlow` construido a partir de un `MutableStateFlow`, además de los
+     Se creó el archivo `viewmodel/SeleccionViewModel.kt` con la clase `SeleccionViewModel : ViewModel()`, que expone el edificio seleccionado tanto con `mutableStateOf` (con `private set`) como con un `StateFlow` construido a partir de un `MutableStateFlow`, además de los
      métodos `seleccionarEdificio()` y `limpiarSeleccion()`:
 
      #figure(
@@ -51,8 +59,7 @@ StateFlow) para almacenar el edificio seleccionado.
        caption: [Clase SeleccionViewModel con el estado en `mutableStateOf` y en `StateFlow`.],
      )
 
-     En `MainActivity.kt` se eliminó el `var edificioSeleccionado by remember {
-     mutableStateOf("Ninguno") }` que usaba la solución con lambda (y con él los imports
+     En `MainActivity.kt` se eliminó el `var edificioSeleccionado by remember {mutableStateOf("Ninguno") }` que usaba la solución con lambda (y con él los imports
      `mutableStateOf` y `setValue`), y en `libs.versions.toml` más `app/build.gradle.kts` se
      agregaron `lifecycle-viewmodel-ktx` y `lifecycle-viewmodel-compose` en la versión 2.11.0,
      porque el proyecto todavía no tenía ninguna dependencia de ViewModel. El valor por defecto
@@ -62,8 +69,7 @@ StateFlow) para almacenar el edificio seleccionado.
 
 
 
-2. Obtén una única instancia de SeleccionViewModel con viewModel() en el Composable raíz y pásala
-a EdificiosScreen y a HomeScreen (en lugar de la lambda del ejercicio resuelto).
+== Paso 2 : Obtén una única instancia de SeleccionViewModel con viewModel() en el Composable raíz y pásala a EdificiosScreen y a HomeScreen (en lugar de la lambda del ejercicio resuelto).
 
    #desarrollo[
      En el Composable raíz `MainScreen` se obtiene una única instancia con `viewModel()` y esa misma
@@ -121,8 +127,7 @@ a EdificiosScreen y a HomeScreen (en lugar de la lambda del ejercicio resuelto).
 
 
 
-3. En EdificiosScreen, al seleccionar un edificio, actualiza directamente el valor en el ViewModel
-en vez de invocar una función lambda.
+== Paso 3 : En EdificiosScreen, al seleccionar un edificio, actualiza directamente el valor en el ViewModel en vez de invocar una función lambda.
 
    #desarrollo[
      Recibida la instancia compartida del punto 2, `EdificiosScreen` cambió su firma de
@@ -169,8 +174,7 @@ en vez de invocar una función lambda.
 
 
 
-4. En HomeScreen, lee el valor del ViewModel (con collectAsState() si usaste StateFlow) y muéstralo,
-verificando que el comportamiento visual sea el mismo que con la lambda.
+== Paso 4 : En HomeScreen, lee el valor del ViewModel (con collectAsState() si usaste StateFlow) y muéstralo, verificando que el comportamiento visual sea el mismo que con la lambda.
 
    #desarrollo[
      En `HomeScreen` se dejó de leer la propiedad del ViewModel directamente y se declaró una variable
@@ -216,8 +220,7 @@ verificando que el comportamiento visual sea el mismo que con la lambda.
 
 
 
-5. Agrega una cuarta pestaña "Perfil" (u otra que prefieras) con un Composable simple de marcador
-de posición, y su NavigationBarItem correspondiente.
+== Paso 5 : Agrega una cuarta pestaña "Perfil" (u otra que prefieras) con un Composable simple de marcador de posición, y su NavigationBarItem correspondiente.
 
    #desarrollo[
      Se creó el objeto `Screen.Perfil` en la `sealed class` con su `route` y su `label`, se registró
@@ -230,19 +233,19 @@ de posición, y su NavigationBarItem correspondiente.
        columns: (1fr, 1fr),
        gutter: 0.8em,
        figure(
-         image("../../img/propuestos/prueba1.png", width: auto, height: 6.2cm),
+         image("../../img/propuestos/prueba1.png", width: auto, height: 8.2cm),
          caption: [(a) Pestaña Home ("Ninguno")],
        ),
        figure(
-         image("../../img/propuestos/prueba2.png", width: auto, height: 6.2cm),
+         image("../../img/propuestos/prueba2.png", width: auto, height: 8.2cm),
          caption: [(b) Pestaña Edificios],
        ),
        figure(
-         image("../../img/propuestos/prueba3.png", width: auto, height: 6.2cm),
+         image("../../img/propuestos/prueba3.png", width: auto, height: 8.2cm),
          caption: [(c) Pestaña Mapa],
        ),
        figure(
-         image("../../img/propuestos/prueba4.png", width: auto, height: 6.2cm),
+         image("../../img/propuestos/prueba4.png", width: auto, height: 8.2cm),
          caption: [(d) Cuarta pestaña Perfil],
        ),
      )

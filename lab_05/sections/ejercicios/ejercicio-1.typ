@@ -133,23 +133,53 @@ Luego, al seleccionar un edificio en la pestaña *Edificios* y volver a *Home*, 
 `HomeScreen` muestra el valor actualizado, lo que demuestra el correcto funcionamiento de la
 comunicación mediante lambda entre pantallas.
 
+==== Pruebas de Integrante 1
+
 #grid(
   columns: (1fr, 1fr),
   gutter: 0.8em,
   figure(
-    image("../../img/resueltoDocente/paso10_1_home_inicial.png", width: auto, height: 5.2cm),
+    image("../../img/resueltoDocente/paso10_1_home_inicial.png", width: auto, height: 8.2cm),
     caption: [(a) Pantalla Home inicial ("Ninguno")],
   ),
   figure(
-    image("../../img/resueltoDocente/paso10_2_edificios.png", width: auto, height: 5.2cm),
+    image("../../img/resueltoDocente/paso10_2_edificios.png", width: auto, height: 8.2cm),
     caption: [(b) Pantalla Edificios (Lista)],
   ),
   figure(
-    image("../../img/resueltoDocente/paso10_3_home_actualizado.png", width: auto, height: 5.2cm),
+    image("../../img/resueltoDocente/paso10_3_home_actualizado.png", width: auto, height: 8.2cm),
     caption: [(c) Home tras seleccionar Pabellón A],
   ),
   figure(
-    image("../../img/resueltoDocente/paso10_4_mapa.png", width: auto, height: 5.2cm),
+    image("../../img/resueltoDocente/paso10_4_mapa.png", width: auto, height: 8.2cm),
+    caption: [(d) Pantalla Mapa (Marcador)],
+  ),
+)
+
+==== Pruebas de Integrante 2
+
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 0.8em,
+  figure(
+    image("../../img/resueltoDocente/int2.png", width: 50%),
+    caption: [(a) Pantalla Home inicial ("Ninguno")],
+  ),
+  figure(
+    image("../../img/resueltoDocente/int2-1.png", width: 50%),
+    caption: [(b) Pantalla Edificios (Lista)],
+  ),
+)
+
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 0.8em,
+  figure(
+    image("../../img/resueltoDocente/int2-3.png", width: 50%),
+    caption: [(c) Home tras seleccionar "BIblioteca central"],
+  ),
+  figure(
+    image("../../img/resueltoDocente/int2_4.png", width: 50%),
     caption: [(d) Pantalla Mapa (Marcador)],
   ),
 )

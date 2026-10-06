@@ -1,3 +1,5 @@
-- Redacta aquí la primera conclusión de la práctica.
-- Redacta aquí la segunda conclusión de la práctica.
-- Redacta aquí la tercera conclusión de la práctica.
+- Se logró construir una aplicación con navegación entre pantallas utilizando `NavigationBar`, `NavHost` y una `sealed class Screen`, esto permite definir las rutas en un solo lugar y evita errores por escribir cadenas sueltas. 
+
+- Se comprobó que comunicar pantallas con una lambda funciona bien en ejemplos pequeños, pero obliga a subir el estado al Composable raíz y a pasar callbacks por cada pantalla. Con un `ViewModel` compartido, `EdificiosScreen` escribe y `HomeScreen` lee del mismo objeto, sin lambdas ni estado local en `MainScreen`. El comportamiento visual es el mismo, pero el código queda más ordenado y desacoplado.
+
+- Se concluye que el `ViewModel` es la mejor opción para mantener el estado en una app real, porque sobrevive a rotaciones y cambios de configuración, y su ciclo de vida lo gestiona el sistema. También se vio que `mutableStateOf` y `StateFlow` sirven para exponer el estado: el primero es más directo y el segundo es más flexible y requiere `collectAsState()`. Por último, mejorar el diseño con Material 3 (barra superior, tarjetas y mapa estilizado) demostró que la interfaz puede cambiar sin tocar la lógica del estado.
