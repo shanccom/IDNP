@@ -1,0 +1,29 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs and Editors
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+
+# Android / Gradle (si se incluyen proyectos de Android Studio)
+.gradle/
+build/
+*/build/
+captures/
+local.properties
+.cxx/
+*.apk
+*.aab
+
+# Logs y temporales
+*.log
