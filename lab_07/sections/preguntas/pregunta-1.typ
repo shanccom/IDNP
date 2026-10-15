@@ -2,12 +2,14 @@
 
 == Respuesta
 
-Sí, se resolvió de forma completa y satisfactoria el ejercicio propuesto por el docente (`PlanoInteractivo_Compose`). En la implementación:
+Sí, logramos resolver de forma completa y satisfactoria el ejercicio propuesto por el docente (`PlanoInteractivo_Compose`). Cada integrante del equipo implementó y verificó el funcionamiento del plano interactivo en su respectivo entorno de desarrollo:
 
-1. Se construyó el plano geométrico dentro de un lienzo `Canvas` de Compose, dibujando los dos ambientes contiguos (*Salón 1* en color azul claro y *Salón 2* en color verde claro) mediante primitivas `drawRect`, y la pared medianera con `drawLine`.
-2. Se definieron los marcadores interactivos como instancias de la clase `Marcador` (con coordenadas `Offset`, radio de `40f`, título y descripción), renderizándolos con `drawCircle` en color rojo.
-3. Se integró la captura de gestos táctiles con `Modifier.pointerInput(Unit)` y `detectTapGestures`, calculando la distancia euclidiana entre la coordenada del toque y el centro de cada marcador.
-4. Al hacer contacto dentro del radio de detección, se actualiza el estado observable `marcadorSeleccionado`, lo que activa la visualización del diálogo modal `AlertDialog` con el nombre y descripción del salón seleccionado.
+1. *Construcción del lienzo:* Se dibujó el plano geométrico dentro de un `Canvas` de Jetpack Compose, representando los ambientes mediante primitivas `drawRect` y la pared medianera con `drawLine`.
+2. *Renderizado de marcadores:* Se definieron las posiciones de los marcadores con coordenadas `Offset` y su radio de cobertura, renderizándolos con `drawCircle`.
+3. *Detección de gestos táctiles:* Mediante `Modifier.pointerInput(Unit)` y `detectTapGestures`, se calculó la distancia euclidiana entre el toque del usuario y el centro del marcador para verificar el impacto.
+4. *Despliegue del diálogo modal:* Al hacer clic dentro del área activa de un marcador, se actualiza el estado observable `marcadorSeleccionado`, desplegando el diálogo `AlertDialog` con el título y la descripción correspondiente.
+
+=== Evidencia de Ejecución - Estudiante 1
 
 #grid(
   columns: (1.2fr, 1fr, 1fr),
@@ -24,5 +26,25 @@ Sí, se resolvió de forma completa y satisfactoria el ejercicio propuesto por e
   figure(
     image("../../img/resuelto/paso-11.2.png", width: 85%),
     caption: [Diálogo informativo modal: Sala B.]
+  )
+)
+
+=== Evidencia de Ejecución - Estudiante 2
+
+#grid(
+  columns: (1.2fr, 1fr, 1fr),
+  gutter: 0.8em,
+  align: horizon + center,
+  figure(
+    image("../../img/propuesta2/resu-2botones.png", width: 90%),
+    caption: [Plano base en emulador (Estudiante 2).]
+  ),
+  figure(
+    image("../../img/propuesta2/resu-boton1.png", width: 85%),
+    caption: [Diálogo modal: Sala A (Estudiante 2).]
+  ),
+  figure(
+    image("../../img/propuesta2/resu-boton2.png", width: 85%),
+    caption: [Diálogo modal: Sala B (Estudiante 2).]
   )
 )

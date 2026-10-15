@@ -5,4 +5,8 @@
     image("../../img/propuestos/comentario-youtube.png", width: 95%),
     caption: [Comentario publicado en el video de referencia de YouTube.]
   )
+  #figure(
+    image("../../img/propuesta2/image.png", width: 95%),
+    caption: [Comentario publicado en el video de referencia de YouTube.]
+  )
 ]

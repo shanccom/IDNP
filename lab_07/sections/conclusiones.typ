@@ -1,3 +1,5 @@
-- Redacta aquí la primera conclusión de la práctica.
-- Redacta aquí la segunda conclusión de la práctica.
-- Redacta aquí la tercera conclusión de la práctica.
+- En conclusión, comprobamos que el `Canvas` de Jetpack Compose es una herramienta muy útil para dibujar un plano de forma directa. Además, logramos que el plano respondiera al toque del usuario, calculando la distancia euclidiana entre el toque y el centro de cada marcador para abrir el diálogo con su información. Esto nos mostró que dibujar y detectar toques son dos partes que van de la mano en una interfaz interactiva.
+
+- Otra conclusión importante es la ventaja de separar los datos del código. Al pasar los ambientes y marcadores a un archivo `ambientes.json` dentro de `assets/`, pudimos cambiar etiquetas, colores y descripciones sin tocar la lógica de la aplicación. Del mismo modo, trasladar el estado a un `PlanoViewModel` permitió que el Composable se encargara solo de mostrar la información y que el estado se mantuviera al rotar la pantalla, logrando que el código quede más ordenado y fácil de mantener.
+
+- Finalmente, integrar el plano como una pantalla más dentro de la navegación (Home → Mapa → Plano) con `NavHost` nos ayudó a ver cómo se une todo en una aplicación completa y no solo en un ejemplo aislado. Al comunicar las pantallas mediante lambdas, el flujo quedó claro y fácil de extender.
