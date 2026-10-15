@@ -13,6 +13,8 @@ Amplía el plano resuelto por el docente para representar la visualización inte
 
 == Desarrollo Paso a Paso
 
+= Propuesta 1
+
 === Paso 1: Amplía la lista de marcadores y agrega los rectángulos/líneas necesarios para representar al menos 4 ambientes (salones y/o patios) de una edificación real del campus, cada uno con su etiqueta visible en el plano.
 
 Se representó la distribución del *Pabellón de Ingeniería de Sistemas (UNSA)* mediante la clase `Ambiente` (`topLeft`, `size`, `color`, `etiqueta`), cubriendo 6 ambientes reales: Aula A101, Aula A102, Lab. Cómputo, Patio Central, Biblioteca y Cafetería, cada uno con un `Marcador` interactivo asociado.

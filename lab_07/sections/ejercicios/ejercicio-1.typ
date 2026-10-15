@@ -109,20 +109,42 @@ En la clase `MainActivity`, dentro del método `onCreate` y el bloque `setConten
 === Paso 11: Ejecución y Validación en Emulador
 Se ejecutó la aplicación en el emulador de Android (API 34). Se constató el renderizado fiel de los ambientes arquitectónicos y marcadores, así como la respuesta interactiva al pulsar sobre cada uno de ellos, abriendo correctamente los diálogos modales informativos de "Sala A" y "Sala B".
 
+==== Pruebas de Ejecución - Estudiante 1
+
 #grid(
   columns: (1.2fr, 1fr, 1fr),
   gutter: 0.8em,
   align: horizon + center,
   figure(
     image("../../img/resuelto/paso-11.3.png", width: 90%),
-    caption: [Visualización del plano y marcadores en el emulador.]
+    caption: [Visualización del plano y marcadores (Estudiante 1).]
   ),
   figure(
     image("../../img/resuelto/paso-11.1.png", width: 85%),
-    caption: [Diálogo informativo modal: Sala A.]
+    caption: [Diálogo modal: Sala A (Estudiante 1).]
   ),
   figure(
     image("../../img/resuelto/paso-11.2.png", width: 85%),
-    caption: [Diálogo informativo modal: Sala B.]
+    caption: [Diálogo modal: Sala B (Estudiante 1).]
+  )
+)
+
+==== Pruebas de Ejecución - Estudiante 2
+
+#grid(
+  columns: (1.2fr, 1fr, 1fr),
+  gutter: 0.8em,
+  align: horizon + center,
+  figure(
+    image("../../img/propuesta2/resu-2botones.png", width: 90%),
+    caption: [Visualización del plano y marcadores (Estudiante 2).]
+  ),
+  figure(
+    image("../../img/propuesta2/resu-boton1.png", width: 85%),
+    caption: [Diálogo modal: Sala A (Estudiante 2).]
+  ),
+  figure(
+    image("../../img/propuesta2/resu-boton2.png", width: 85%),
+    caption: [Diálogo modal: Sala B (Estudiante 2).]
   )
 )
