@@ -168,8 +168,8 @@ Para comprobar que la interfaz lee dinámicamente el archivo `ambientes.json` si
 2. *Modificación del JSON:* Se editaron los valores en `ambientes.json` (modificando etiquetas, colores de ambiente o descripciones de los marcadores). Al reiniciar la ejecución, la interfaz reflejó automáticamente los nuevos cambios en el emulador.
 
   
-  #captura("../../../img/propuesta2/p2-sincambio.png", [Plano cargado inicialmente desde el archivo JSON], ancho: 100%, alto: 6.5cm),
-  #captura("../../../img/propuesta2/p2-concambio.png", [Plano tras modificar los datos en ambientes.json], ancho: 100%, alto: 6.5cm),
+  #captura("../../../img/propuesta2/p2-sincambio.png", [Plano cargado inicialmente desde el archivo JSON], ancho: 80%, alto: 6.5cm),
+  #captura("../../../img/propuesta2/p2-concambio.png", [Plano tras modificar los datos en ambientes.json], ancho: 80%, alto: 6.5cm),
 
 
 ]
@@ -194,12 +194,6 @@ implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
 
 === Código implementado en `MainActivity.kt`
 #captura("../../../img/propuesta2/p3_codigo.png", [Clase `PlanoViewModel` en Android Studio], ancho: 85%)
-
-=== Resultado 
-
-El comportamiento visual es el mismo de los pasos anteriores, pero ahora el Composable no guarda ningún dato: lee todo del ViewModel. 
-
-
 
 ]
 === Paso 4: Integra este plano como una nueva pantalla accesible desde MapaScreen (Laboratorio 05) o desde una tarjeta del Laboratorio 06.
@@ -268,18 +262,6 @@ fun MainScreen() {
         }
     }
 }
-
-class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            PlanoInteractivo_ComposeTheme {
-                MainScreen()
-            }
-        }
-    }
-}
-
 
 ```
 ]
