@@ -7,6 +7,7 @@
     #block(text(weight: "bold")[I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS], below: 0.8em)
 
       - Link Repositorio Propuesta 1: https://github.com/shanccom/IDNP_Repo/tree/main/PlanoInteractivo_Compose
+      - Link Repositorio Propuesta 2:https://github.com/DeniseHuacani/IDNP-LABORATORIO/tree/main/lab07/PlanoInteractivo_Compose
 
       #include "ejercicios/ejercicio-1.typ"
       #v(0.6em)
