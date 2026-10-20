@@ -1,12 +1,13 @@
 #import "template.typ": unsa-report
 
 #show: unsa-report.with(
-  course_name: "Nombre del Curso",
-  lab_title: "Práctica 01",
-  lab_number: "01",
-  instructor_name: "Nombre del Docente",
+  course_name: "INTRODUCCION AL DESARROLLO DE NUEVAS PLATAFORMAS (E)",
+  lab_title: "Listas filtrables con LazyColumn en Jetpack Compose",
+  lab_number: "08",
+  instructor_name: "Roxana Evelyn Limache Calatayud",
   members: (
-    "Nombre del Estudiante",
+    "Hancco Mullisaca, Sergio Danilo",
+    "Huacani Jara, Denise Andrea",
   ),
 )
 
