@@ -9,6 +9,7 @@ Amplía el ejercicio resuelto para mostrar la lista completa de edificaciones hi
 + *(Reto opcional) Integración:* Integra esta lista filtrable como reemplazo de `EdificiosScreen` (Laboratorio 05/06), combinándola con las tarjetas `TarjetaLugar` o `TarjetaCompacta` del Laboratorio 06 dentro de cada fila.
 
 == Desarrollo Paso a Paso
+=== - Propuesta 1
 
 === Paso 1. Carga de Edificaciones Reales desde Archivo de Texto Plano (Persistencia)
 

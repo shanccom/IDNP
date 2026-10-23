@@ -1,5 +1,6 @@
 = Pregunta 1: ¿Lograste resolver completamente el Ejercicio/Problema Resuelto por el Docente (lista de edificaciones que se filtra en tiempo real al escribir en el campo de búsqueda)? Adjunta una captura de pantalla del emulador mostrando el resultado como evidencia.
 
+#pad(left:1.5em)[
 Sí, se resolvió de forma completa y satisfactoria el ejercicio propuesto por el docente (`ListaFiltrable_Compose`).
 
 La solución implementó con éxito la arquitectura reactiva en Jetpack Compose:
@@ -10,6 +11,7 @@ La solución implementó con éxito la arquitectura reactiva en Jetpack Compose:
 
 === Evidencias de Ejecución en el Emulador
 
+  *Estudiante 1*
 #grid(
   columns: (1fr, 1fr, 1fr),
   gutter: 0.8em,
@@ -27,3 +29,24 @@ La solución implementó con éxito la arquitectura reactiva en Jetpack Compose:
     caption: [Coincidencia refinada mostrando la tarjeta específica.]
   )
 )
+
+  *Estudiante 2*
+  #grid(
+    columns: (1fr, 1fr, 1fr),
+    gutter: 0.8em,
+    align: horizon + center,
+    figure(
+      image("../../img/propuesta2/res-completo.png", width: 70%),
+      caption: [Estudiante 2 : Lista inicial con todos los edificios.]
+    ),
+    figure(
+      image("../../img/propuesta2/res-biblioteca.png", width: 70%),
+      caption: [Estudiante 2 : Busqueda de biblioteca]
+    ),
+    figure(
+      image("../../img/propuesta2/res-vacio.png", width: 70%),
+      caption: [Estudiante 2 – Paso 11 (a): Búsqueda sin coincidencias registradas.]
+    ),
+  )
+
+]

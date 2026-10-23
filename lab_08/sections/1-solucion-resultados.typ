@@ -7,11 +7,15 @@
     #block(text(weight: "bold")[I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS], below: 0.8em)
 
       Link Repositorio 1: https://github.com/shanccom/IDNP_Repo/tree/main/lab08_ListaFiltrable_Compose
+
+      Link Repositorio 2:https://github.com/DeniseHuacani/IDNP-LABORATORIO/tree/main/lab08/ListaFiltrable_Compose
       #include "ejercicios/ejercicio-1.typ"
       #v(0.6em)
       #include "ejercicios/ejercicio-2.typ"
       #v(0.6em)
-      #include "ejercicios/ejercicio-3.typ"
+
+      #include "ejercicios/propuesta2/ejercicio-1.typ"
+      
     ]
   ],
   [

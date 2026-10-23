@@ -80,29 +80,50 @@ A continuación se detallan, paso a paso, las instrucciones para mostrar una lis
 + *Paso 10. Ejecución y prueba interactiva en el emulador:*
   - Ejecutar la aplicación en el emulador o dispositivo de prueba con API 34+.
   - Escribir distintas cadenas de caracteres en el campo de búsqueda y constatar que la lista se recompone en tiempo real mostrando exclusivamente las coincidencias por cada pulsación.
-
+*Estudiante 1*
   #grid(
     columns: (1fr, 1fr, 1fr),
     gutter: 0.8em,
     align: horizon + center,
     figure(
       image("../../img/resueltos/paso-10.1.png", width: 70%),
-      caption: [Paso 10 (a): Lista inicial con todos los edificios.]
+      caption: [EStudiante 1 : Lista inicial con todos los edificios.]
     ),
     figure(
       image("../../img/resueltos/paso-10.2.png", width: 70%),
-      caption: [Paso 10 (b): Filtrado interactivo en tiempo real.]
+      caption: [Estudiante 1 : Filtrado interactivo en tiempo real.]
     ),
     figure(
       image("../../img/resueltos/paso-10.3.png", width: 70%),
-      caption: [Paso 10 (c): Coincidencia refinada específica.]
+      caption: [Estudiante 1 : Coincidencia refinada específica.]
     )
   )
+    
+
+  *Estudiante 2*
+  #grid(
+    columns: (1fr, 1fr, 1fr),
+    gutter: 0.8em,
+    align: horizon + center,
+    figure(
+      image("../../img/propuesta2/res-completo.png", width: 70%),
+      caption: [Estudiante 2 : Lista inicial con todos los edificios.]
+    ),
+    figure(
+      image("../../img/propuesta2/res-biblioteca.png", width: 70%),
+      caption: [Estudiante 2 : Busqueda de biblioteca]
+    ),
+    figure(
+      image("../../img/propuesta2/res-versita.png", width: 70%),
+      caption: [Estudiante 2 : Busqueda que contengan la palabra "versi"]
+    )
+  )
+
 
 + *Paso 11. Validación de escenarios límite:*
   - Ingresar intencionalmente términos o palabras clave que no coincidan con ningún registro.
   - Verificar que la lista queda vacía de forma limpia y transparente, sin generar cuelgues ni errores en la aplicación.
-
+*Estudiante 1*
   #grid(
     columns: (1fr, 1fr),
     gutter: 1.5em,
@@ -116,3 +137,16 @@ A continuación se detallan, paso a paso, las instrucciones para mostrar una lis
       caption: [Paso 11 (b): Lista vacía sin errores en el emulador.]
     )
   )
+
+  *Estudiante 2*
+  #grid(
+    columns: (1fr, 1fr),
+    gutter: 1.5em,
+    align: horizon + center,
+    figure(
+      image("../../img/propuesta2/res-vacio.png", width: 50%),
+      caption: [Estudiante 2 – Paso 11 (a): Búsqueda sin coincidencias registradas.]
+    ),
+    
+  )
+
