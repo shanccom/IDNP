@@ -1,19 +1,20 @@
-= Ejercicio 1
+= EJERCICIOS PROPUESTOS
 
-== Enunciado
+Amplía el modelo del ejercicio resuelto a al menos 3 tablas para almacenar la información de las edificaciones en una base de datos:
 
-Instrucciones del primer ejercicio.
+= 1. Diseña el diagrama del modelo de datos agregando una tercera entidad NotaEntity(id, ambienteId, texto) relacionada uno-a-muchos con AmbienteEntity (un ambiente puede tener varias notas).
 
-== Desarrollo
+#figure(
+  image("../../img/ejercicio-1.png", width: 35%),
+  caption: [Diagrama del modelo de datos con la incorporación de la entidad `NotaEntity`.],
+)
 
-Solución desarrollada por el integrante encargado.
+== ¿Qué cambios se hicieron en el modelo?
 
-```python
-# Solución del Ejercicio 1
-def resolver_problema(datos):
-    resultado = [x * 2 for x in datos if x > 0]
-    return resultado
++ *Incorporación de la entidad `NotaEntity`:*
+  - `id`: Clave primaria (PK) autogenerada para identificar de forma unívoca cada nota.
+  - `ambienteId`: Clave foránea (FK) vinculada a la clave primaria `id` de `AmbienteEntity`.
+  - `texto`: Campo de tipo texto para el contenido de la nota.
 
-datos = [1, -2, 3, -4, 5]
-print(f"Resultado: {resolver_problema(datos)}")
-```
++ *Definición de la relación uno a muchos (1:N):*
+  - `AmbienteEntity` $arrow.r$ `NotaEntity`: Un ambiente puede tener asociadas cero o múltiples notas (`||--o{`), mientras que cada registro en `NotaEntity` pertenece obligatoriamente a un único ambiente mediante su clave foránea `ambienteId`.

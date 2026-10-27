@@ -1,27 +1,34 @@
-= Ejercicio 3
+= 3. Realiza una segunda consulta relacional (por ejemplo, obtener un AmbienteEntity junto con su List<NotaEntity> mediante \@Embedded/\@Relation), distinta a la implementada en el ejercicio resuelto
 
-== Enunciado
+== 1. Clase de relación POJO: `AmbienteConNotas`
 
-Instrucciones del tercer ejercicio.
+Se define la clase intermedia para modelar el vínculo 1 a muchos entre `AmbienteEntity` y `NotaEntity`:
 
-== Desarrollo
+```kotlin
+data class AmbienteConNotas(
+    @Embedded
+    val ambiente: AmbienteEntity,
 
-Solución desarrollada por el integrante encargado.
-
-```python
-# Solución del Ejercicio 3
-def busqueda_binaria(arr, objetivo):
-    izq, der = 0, len(arr) - 1
-    while izq <= der:
-        medio = (izq + der) // 2
-        if arr[medio] == objetivo:
-            return medio
-        elif arr[medio] < objetivo:
-            izq = medio + 1
-        else:
-            der = medio - 1
-    return -1
-
-lista = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
-print(f"Índice de 23: {busqueda_binaria(lista, 23)}")
+    @Relation(
+        parentColumn = "id",
+        entityColumn = "ambienteId"
+    )
+    val notas: List<NotaEntity>
+)
 ```
+
+- *`@Embedded`:* Incrusta la entidad padre `AmbienteEntity`.
+- *`@Relation`:* Establece el enlace 1 a muchos conectando la columna primaria `id` de `AmbienteEntity` con la clave foránea `ambienteId` de `NotaEntity`.
+
+== 2. Método de consulta en el DAO: `EdificioDao`
+
+Se agrega el método relacional con transacción atómica garantizada:
+
+```kotlin
+@Transaction
+@Query("SELECT * FROM AmbienteEntity")
+suspend fun obtenerAmbientesConNotas(): List<AmbienteConNotas>
+```
+
+- *`@Transaction`:* Garantiza la consistencia atómica de la lectura para que Room ejecute la consulta del padre y las consultas de relación hijas en una sola transacción.
+- *`@Query`:* Consulta la tabla `AmbienteEntity` y Room rellena automáticamente la lista `notas` asociada a cada ambiente.

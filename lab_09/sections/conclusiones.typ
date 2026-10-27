@@ -1,3 +1,9 @@
-- Redacta aquí la primera conclusión de la práctica.
-- Redacta aquí la segunda conclusión de la práctica.
-- Redacta aquí la tercera conclusión de la práctica.
+- *Persistencia reactiva y sincronización fluida:* Integrar Room con Jetpack Compose y corrutinas nos enseña que la base de datos local funciona mejor como una "fuente única de verdad" viva. Al transformar los datos en flujos observables (`StateFlow`), la interfaz se actualiza de manera automática cada vez que ocurre un cambio, eliminando la necesidad de recargas manuales y evitando bloqueos en la pantalla.
+
+- *Confiar la integridad al motor de base de datos:* El uso de claves foráneas con eliminación en cascada (`CASCADE`) demuestra lo valioso que es delegar las reglas de consistencia a SQLite en lugar de programar validaciones manuales en el código. Esto previene que queden registros huérfanos (como notas sin ambiente) y simplifica el mantenimiento a medida que el sistema crece.
+
+- *Prevención de errores desde la compilación:* La verificación que realiza Room junto a KSP en tiempo de compilación aporta una gran tranquilidad durante el desarrollo. Detectar errores de sintaxis SQL o tipos incompatibles antes de ejecutar la aplicación ahorra tiempo de depuración y da confianza para refactorizar o agregar nuevas tablas sin temor a fallos inesperados.
+
+- *Modelado relacional natural para la interfaz:* Diseñar la jerarquía de edificios, ambientes y notas mediante clases intermedias (`@Relation`) evidencia que un buen diseño relacional repercute directamente en la comodidad del desarrollador. La interfaz puede consumir estructuras completas y ordenadas sin necesidad de realizar múltiples consultas dispersas ni transformar datos a mano.
+
+- *Privacidad protegida por diseño en Android:* Comprender que la base de datos reside en el almacenamiento interno privado (`sandbox`) resalta la importancia de la seguridad por defecto. Saber que los datos quedan aislados de otras aplicaciones y se eliminan limpiamente al desinstalar la app nos recuerda que una buena arquitectura debe cuidar la privacidad del usuario desde la capa de persistencia.
