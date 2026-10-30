@@ -11,10 +11,10 @@ Amplía el modelo del ejercicio resuelto a al menos 3 tablas para almacenar la i
 
 == ¿Qué cambios se hicieron en el modelo?
 
-+ *Incorporación de la entidad `NotaEntity`:*
+- *Incorporación de la entidad `NotaEntity`:*
   - `id`: Clave primaria (PK) autogenerada para identificar de forma unívoca cada nota.
   - `ambienteId`: Clave foránea (FK) vinculada a la clave primaria `id` de `AmbienteEntity`.
   - `texto`: Campo de tipo texto para el contenido de la nota.
 
-+ *Definición de la relación uno a muchos (1:N):*
+-  *Definición de la relación uno a muchos (1:N):*
   - `AmbienteEntity` $arrow.r$ `NotaEntity`: Un ambiente puede tener asociadas cero o múltiples notas (`||--o{`), mientras que cada registro en `NotaEntity` pertenece obligatoriamente a un único ambiente mediante su clave foránea `ambienteId`.

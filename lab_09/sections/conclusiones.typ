@@ -1,9 +1,23 @@
-- *Persistencia reactiva y sincronización fluida:* Integrar Room con Jetpack Compose y corrutinas nos enseña que la base de datos local funciona mejor como una "fuente única de verdad" viva. Al transformar los datos en flujos observables (`StateFlow`), la interfaz se actualiza de manera automática cada vez que ocurre un cambio, eliminando la necesidad de recargas manuales y evitando bloqueos en la pantalla.
+== Conclusiones
 
-- *Confiar la integridad al motor de base de datos:* El uso de claves foráneas con eliminación en cascada (`CASCADE`) demuestra lo valioso que es delegar las reglas de consistencia a SQLite en lugar de programar validaciones manuales en el código. Esto previene que queden registros huérfanos (como notas sin ambiente) y simplifica el mantenimiento a medida que el sistema crece.
+- Con las clases intermedias y  \@Relation pudimos pedir un edificio con sus ambientes, y un ambiente con sus notas, en una sola consulta. Así la interfaz recibe los datos ya ordenados y no hay que juntarlos a mano.
 
-- *Prevención de errores desde la compilación:* La verificación que realiza Room junto a KSP en tiempo de compilación aporta una gran tranquilidad durante el desarrollo. Detectar errores de sintaxis SQL o tipos incompatibles antes de ejecutar la aplicación ahorra tiempo de depuración y da confianza para refactorizar o agregar nuevas tablas sin temor a fallos inesperados.
+- Con las claves foráneas y CASCADE, al borrar un edificio se borran solos sus ambientes y sus notas. Nos ahorramos programar esa limpieza en el código y no quedan registros huérfanos.
 
-- *Modelado relacional natural para la interfaz:* Diseñar la jerarquía de edificios, ambientes y notas mediante clases intermedias (`@Relation`) evidencia que un buen diseño relacional repercute directamente en la comodidad del desarrollador. La interfaz puede consumir estructuras completas y ordenadas sin necesidad de realizar múltiples consultas dispersas ni transformar datos a mano.
+- Guardar los resultados en un StateFlow y llamar a cargar() después de cada cambio hace que la lista se actualice sola al editar o eliminar. La interfaz solo muestra el estado, y la lógica queda en el ViewModel.
 
-- *Privacidad protegida por diseño en Android:* Comprender que la base de datos reside en el almacenamiento interno privado (`sandbox`) resalta la importancia de la seguridad por defecto. Saber que los datos quedan aislados de otras aplicaciones y se eliminan limpiamente al desinstalar la app nos recuerda que una buena arquitectura debe cuidar la privacidad del usuario desde la capa de persistencia.
+- Como Room revisa las consultas al compilar, errores como un nombre de columna mal escrito o un tipo incorrecto aparecen antes de abrir la app. Eso ahorra tiempo y da confianza al agregar tablas nuevas.
+
+- Al cerrar y volver a abrir la app, los cambios seguían ahí, y el Database Inspector lo confirmó. Además, la base queda en el almacenamiento interno de la app, así que otras aplicaciones no pueden acceder a ella.
+
+== Recomendaciones
+
+- Si las consultas devolvieran Flow en lugar de List, Room avisaría solo cuando algo cambie. Así ya no haría falta llamar a cargar() después de cada operación y habría menos código repetido.
+
+- fallbackToDestructiveMigration() sirve en un laboratorio, pero en una app real borraría los datos del usuario. Lo mejor es escribir una Migration cada vez que se suba la versión.
+
+- Como el CASCADE borra ambientes y notas sin avisar, conviene mostrar un diálogo del tipo «¿Seguro que quieres eliminar?». Así se evitan borrados accidentales con un simple toque.
+
+- Después de modificar entidades o subir la versión, es buena idea abrir el Database Inspector y ver que las tablas y los datos son los esperados. Es una forma rápida de detectar problemas antes de seguir.
+
+- Tener todo en MainActivity.kt funciona para el laboratorio, pero crece rápido. Lo ideal es dividirlo en entidades, Dao, ViewModel y pantallas, para que sea más fácil de leer y mantener.

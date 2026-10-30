@@ -6,7 +6,9 @@
     #pad(left: 0.5em, top: 0.5em)[
     #block(text(weight: "bold")[I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS], below: 0.8em)
 
-      Link Propuesta: https://github.com/shanccom/IDNP_Repo/tree/main/Lab_09_PersistenciaRoom_Compose
+      Link Propuesta 1 : https://github.com/shanccom/IDNP_Repo/tree/main/Lab_09_PersistenciaRoom_Compose
+
+      Link Propuesta 2: https://github.com/DeniseHuacani/IDNP-LABORATORIO/tree/main/lab09/PersistenciaRoom_Compose
 
       #include "ejercicios/ejercicio-resuelto.typ"
       #v(0.6em)
@@ -17,6 +19,10 @@
       #include "ejercicios/ejercicio-3.typ"
       #v(0.6em)
       #include "ejercicios/ejercicio-4.typ"
+      #v(0.6em)
+
+      = Propuesta 2
+      #include "ejercicios/ejercicio-propuesta2.typ"
     ]
   ],
   [

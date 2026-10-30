@@ -1,6 +1,7 @@
+= Propuesta 1 
 = 2. Implementa el modelo completo con Room: las 3 entidades, sus claves foráneas, y el Dao correspondiente con \@Insert, \@Update y \@Delete para las 3 tablas.
-
-== 1. Definición de la entidad `NotaEntity`
+#pad(1.5em)[
+== 2.1. Definición de la entidad `NotaEntity`
 
 Se implementa la tercera entidad vinculada a `AmbienteEntity` mediante una clave foránea (`ForeignKey`):
 
@@ -22,7 +23,7 @@ data class NotaEntity(
 )
 ```
 
-== 2. Operaciones CRUD en `EdificioDao`
+== 2.2. Operaciones CRUD en `EdificioDao`
 
 Se incorporan los métodos de inserción, actualización y eliminación para las tres tablas:
 
@@ -46,7 +47,7 @@ interface EdificioDao {
 }
 ```
 
-== 3. Registro en `AppDatabase`
+== 2.3. Registro en `AppDatabase`
 
 Se incorpora `NotaEntity` al arreglo de entidades de Room:
 
@@ -70,3 +71,6 @@ abstract class AppDatabase : RoomDatabase() {
 - *Entidad `NotaEntity`:* Incorpora clave primaria autogenerada (`id`) y clave foránea (`ambienteId` $arrow.r$ `AmbienteEntity.id`).
 - *DAO unificado:* Expone operaciones CRUD completas (`@Insert`, `@Update`, `@Delete`) para `EdificioEntity`, `AmbienteEntity` y `NotaEntity`.
 - *Esquema Room:* Inclusión de `NotaEntity::class` dentro del arreglo `entities` de `AppDatabase`.
+
+
+]
