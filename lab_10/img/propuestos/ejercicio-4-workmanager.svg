@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 160" width="100%" height="100%">
+  <defs>
+    <marker id="arrow-black" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#111111"/>
+    </marker>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#666666"/>
+    </marker>
+    <style>
+      .badge { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.6px; fill: #FFFFFF; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; font-weight: 700; fill: #111111; }
+      .node-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; font-weight: 600; fill: #111111; }
+      .node-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 8.5px; fill: #555555; }
+      .subtext { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 8.5px; fill: #444444; }
+      .edge-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 8px; fill: #666666; font-style: italic; }
+    </style>
+  </defs>
+
+  <!-- Canvas -->
+  <rect width="780" height="160" fill="#FFFFFF" rx="6" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- PANEL 1: SERVICE MANUAL -->
+  <g transform="translate(14, 12)">
+    <rect width="364" height="136" rx="6" fill="#FAFAFA" stroke="#D1D5DB" stroke-width="1"/>
+    
+    <!-- Header -->
+    <rect x="12" y="10" width="112" height="18" rx="3" fill="#111111"/>
+    <text x="68" y="22" text-anchor="middle" class="badge">SERVICE MANUAL</text>
+    <text x="135" y="23" class="title">startService()</text>
+
+    <!-- Nodes -->
+    <rect x="12" y="38" width="85" height="38" rx="4" fill="#FFFFFF" stroke="#111111" stroke-width="1.1"/>
+    <text x="54" y="54" text-anchor="middle" class="node-title">UI Compose</text>
+    <text x="54" y="67" text-anchor="middle" class="node-sub">Click Botón</text>
+
+    <line x1="97" y1="57" x2="123" y2="57" stroke="#111111" stroke-width="1.3" marker-end="url(#arrow-black)"/>
+
+    <rect x="125" y="38" width="112" height="38" rx="4" fill="#FFFFFF" stroke="#111111" stroke-width="1.1"/>
+    <text x="181" y="54" text-anchor="middle" class="node-title">SincronizacionService</text>
+    <text x="181" y="67" text-anchor="middle" class="node-sub">Memoria RAM</text>
+
+    <line x1="237" y1="57" x2="263" y2="57" stroke="#111111" stroke-width="1.3" marker-end="url(#arrow-black)"/>
+
+    <rect x="265" y="38" width="85" height="38" rx="4" fill="#FFFFFF" stroke="#111111" stroke-width="1.1"/>
+    <text x="307" y="54" text-anchor="middle" class="node-title">Room DB</text>
+    <text x="307" y="67" text-anchor="middle" class="node-sub">Edificios</text>
+
+    <!-- Feedback line -->
+    <path d="M 181 76 L 181 92 L 54 92 L 54 78" fill="none" stroke="#666666" stroke-dasharray="2 2" stroke-width="1" marker-end="url(#arrow-gray)"/>
+    <text x="117" y="88" text-anchor="middle" class="edge-label">BroadcastReceiver (Feedback UI)</text>
+
+    <!-- Summary box -->
+    <rect x="12" y="102" width="338" height="24" rx="3" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="0.8"/>
+    <text x="181" y="117" text-anchor="middle" class="subtext">• Efímero: Inmediato en pantalla, pero no sobrevive a reinicios ni Doze.</text>
+  </g>
+
+  <!-- PANEL 2: WORKMANAGER -->
+  <g transform="translate(402, 12)">
+    <rect width="364" height="136" rx="6" fill="#FAFAFA" stroke="#111111" stroke-width="1.2"/>
+    
+    <!-- Header -->
+    <rect x="12" y="10" width="105" height="18" rx="3" fill="#111111"/>
+    <text x="64" y="22" text-anchor="middle" class="badge">WORKMANAGER</text>
+    <text x="128" y="23" class="title">androidx.work</text>
+
+    <!-- Nodes -->
+    <rect x="12" y="38" width="88" height="38" rx="4" fill="#FFFFFF" stroke="#111111" stroke-width="1.1"/>
+    <text x="56" y="53" text-anchor="middle" class="node-title">WorkRequest</text>
+    <text x="56" y="66" text-anchor="middle" class="node-sub">Constraints (Wi-Fi)</text>
+
+    <line x1="100" y1="57" x2="124" y2="57" stroke="#111111" stroke-width="1.3" marker-end="url(#arrow-black)"/>
+
+    <rect x="126" y="38" width="108" height="38" rx="4" fill="#FFFFFF" stroke="#111111" stroke-width="1.1"/>
+    <text x="180" y="53" text-anchor="middle" class="node-title">SQLite Interno</text>
+    <text x="180" y="66" text-anchor="middle" class="node-sub">+ JobScheduler</text>
+
+    <line x1="234" y1="57" x2="258" y2="57" stroke="#111111" stroke-width="1.3" marker-end="url(#arrow-black)"/>
+
+    <rect x="260" y="38" width="90" height="38" rx="4" fill="#FFFFFF" stroke="#111111" stroke-width="1.1"/>
+    <text x="305" y="53" text-anchor="middle" class="node-title">CoroutineWorker</text>
+    <text x="305" y="66" text-anchor="middle" class="node-sub">Room DB (Retry)</text>
+
+    <!-- Feedback line -->
+    <path d="M 180 76 L 180 92 L 56 92 L 56 78" fill="none" stroke="#666666" stroke-dasharray="2 2" stroke-width="1" marker-end="url(#arrow-gray)"/>
+    <text x="118" y="88" text-anchor="middle" class="edge-label">WorkInfo (LiveData / Flow)</text>
+
+    <!-- Summary box -->
+    <rect x="12" y="102" width="338" height="24" rx="3" fill="#FFFFFF" stroke="#111111" stroke-width="0.8"/>
+    <text x="181" y="117" text-anchor="middle" class="subtext">• Garantizado: Persiste en SQLite tras reinicios y reintenta con backoff.</text>
+  </g>
+</svg>
