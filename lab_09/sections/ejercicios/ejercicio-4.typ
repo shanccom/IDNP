@@ -1,13 +1,14 @@
 = 4. Agrega a la interfaz botones para eliminar y actualizar un edificio o ambiente existente,verificando que los cambios persistan.
+#pad(1.5em)[
 
 Se implementó la funcionalidad completa de actualización y eliminación para edificios y ambientes con un diseño minimalista en Jetpack Compose, asegurando la persistencia y consistencia en SQLite mediante Room.
 
-== 1. Configuración de persistencia e integridad referencial
+== 4.1. Configuración de persistencia e integridad referencial
 
 - *Eliminación en cascada (`ForeignKey.CASCADE`):* Se configuró `onDelete = ForeignKey.CASCADE` en las anotaciones `@ForeignKey` de `AmbienteEntity` y `NotaEntity`. Al eliminar un edificio, SQLite remueve automáticamente sus ambientes asociados, preservando la integridad referencial.
 - *Dependencias de UI:* Se agregó `androidx.compose.material:material-icons-core` para disponer de los iconos vectoriales `Icons.Default.Edit` e `Icons.Default.Delete`.
 
-== 2. Métodos CRUD en `EdificiosViewModel`
+== 4.2. Métodos CRUD en `EdificiosViewModel`
 
 Se implementaron funciones asíncronas en el ViewModel que ejecutan las operaciones en segundo plano mediante corrutinas y recargan inmediatamente el flujo observable `StateFlow`:
 
@@ -29,7 +30,7 @@ fun eliminarAmbiente(ambiente: AmbienteEntity) {
 }
 ```
 
-== 3. Botones de acción en la interfaz (Compose)
+== 4.3. Botones de acción en la interfaz (Compose)
 
 Dentro de cada tarjeta `OutlinedCard` de edificio y fila de ambiente se integraron botones interactivos (`IconButton`):
 
@@ -51,7 +52,7 @@ IconButton(onClick = { ambienteAEliminar = ambiente }) {
 }
 ```
 
-== 4. Diálogos modales de edición y confirmación (`AlertDialog`)
+== 4.4. Diálogos modales de edición y confirmación (`AlertDialog`)
 
 La interacción con el usuario se gestiona mediante diálogos de Material 3:
 
@@ -60,7 +61,7 @@ La interacción con el usuario se gestiona mediante diálogos de Material 3:
 
 Al confirmar cualquier modificación, Room ejecuta las sentencias SQL (`@Update` o `@Delete`), actualizando de forma reactiva la interfaz sin necesidad de recargar la aplicación manualmente.
 
-== 5. Verificación y pruebas de persistencia en ejecución
+== 4.5. Verificación y pruebas de persistencia en ejecución
 
 A continuación se evidencia la secuencia de validación en el emulador Android, comprobando la interacción con los controles de edición, la confirmación de cambios y la persistencia en Room tras cerrar la aplicación:
 
@@ -88,3 +89,6 @@ A continuación se evidencia la secuencia de validación en el emulador Android,
   ),
   caption: [Secuencia de verificación de actualización y persistencia en Room: (a) Interfaz con botones de editar y eliminar; (b) Diálogo para renombrar a "Sala de lectura V1"; (c) Salida al launcher para forzar el cierre; (d) Reapertura de la aplicación con los cambios persistidos.],
 )
+
+
+]

@@ -7,6 +7,7 @@
   instructor_name: "Mg Roxana Evelyn Limache Calatayud",
   members: (
     "Hancco Mullisaca, Sergio Danilo",
+    "Huacani Jara, Denise Andrea"
   ),
 )
 

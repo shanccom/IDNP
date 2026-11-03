@@ -168,12 +168,26 @@ llamada a ListaEdificiosConAmbientes dentro de setContent.]
 Ejecutar la aplicación en un emulador y verificar en la LazyColumn que los edificios aparecen junto con sus
 ambientes; cerrar y volver a abrir la aplicación y confirmar que los datos siguen ahí (persisten en la base
 de datos local).
+#v(1em)
 
-#captura(
-  ruta: "../../img/resuelto/paso-12.png",
-  width: 25%,
-)[Paso 12: aplicación en ejecución en el emulador, mostrando los edificios con sus ambientes en la
-LazyColumn después de cerrar y volver a abrir la aplicación.]
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 1em,
+  [
+    *Pruebas de Integrante 1*
+    #captura(
+      ruta: "../../img/resuelto/paso-12.png",
+      width: 60%,
+    )[Paso 12-Integrante 1: aplicación en ejecución en el emulador, mostrando los edificios con sus ambientes en la LazyColumn después de cerrar y volver a abrir la aplicación.]
+  ],
+  [
+    *Pruebas de Integrante 2*
+    #captura(
+      ruta: "/img/propuesta2/re-completo.png",
+      width: 60%,
+    )[Paso 12-Integrante 2: ejecución con los edificios y sus ambientes.]
+  ]
+)#v(1em)
 
 == Paso 13. Verificar la base de datos
 
@@ -181,8 +195,21 @@ Verificar la base de datos: Room usa SQLite y guarda el archivo app.db dentro de
 ejecución, abrir View > Tool Windows > App Inspection > Database Inspector y revisar las tablas
 EdificioEntity y AmbienteEntity (deben verse 2 edificios y 3 ambientes).
 
+*Pruebas de Integrante 1*
 #captura(
   ruta: "../../img/resuelto/paso-13.png",
-  width: 45%,
+  width: 75%,
 )[Paso 13: Database Inspector mostrando las tablas EdificioEntity y AmbienteEntity de la base de
 datos app.db, con 2 edificios y 3 ambientes.]
+
+*Pruebas de Integrante 2*
+
+#captura(
+  ruta: "/img/propuesta2/re-ambientes.png",
+  width: 70%,
+)[Paso 13 (Integrante 2): Database Inspector mostrando la tabla AmbienteEntity de app.db, con 3 ambientes.]
+    #v(0.5em)
+    #captura(
+      ruta: "/img/propuesta2/re-edificio.png",
+      width: 70%,
+    )[Paso 13 (Integrante 2): Database Inspector mostrando las tablas EdificioEntity]
