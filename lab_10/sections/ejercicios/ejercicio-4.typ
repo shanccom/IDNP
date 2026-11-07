@@ -1,5 +1,7 @@
 = 4. Investiga qué son los WorkManager de Android y explica en el informe en qué casos convendría usar WorkManager en lugar de un Service iniciado manualmente para esta misma tarea de sincronización.
 
+#pad(1.1em)[
+
 *WorkManager* (`androidx.work`) es la biblioteca de Android Jetpack para ejecutar *trabajo en segundo plano diferible y garantizado*. A diferencia de un `Service` manual (que corre en la memoria RAM y muere al cerrarse la app), WorkManager persiste las tareas en SQLite interno, reprogramándolas incluso tras reiniciar el dispositivo o bajo políticas de ahorro energético (*Doze Mode*).
 
 #table(
@@ -37,3 +39,5 @@ val req = PeriodicWorkRequestBuilder<SyncWorker>(6, TimeUnit.HOURS)
     .setConstraints(Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build()).build()
 WorkManager.getInstance(context).enqueueUniquePeriodicWork("sync_edificios", ExistingPeriodicWorkPolicy.KEEP, req)
 ```
+
+]

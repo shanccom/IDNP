@@ -117,7 +117,8 @@ Dentro de MainActivity, en el bloque setContent, mostrar PantallaSincronizacion:
 == Paso 11. Ejecución en emulador y verificación en Logcat
 
 Ejecutar la aplicación en un emulador, pulsar "Sincronizar" una vez y verificar en Logcat (filtrando con tag:SYNC) que aparece el mensaje "1. Servicio iniciado", mientras la UI muestra el indicador de progreso.
-
+#pad(1.1em)[
+*Pruebas de Integrante 1*
 #captura(
   ruta: (
     "../../img/resuelto/paso-11.1.png",
@@ -127,10 +128,24 @@ Ejecutar la aplicación en un emulador, pulsar "Sincronizar" una vez y verificar
   grid-width: 80%,
 )[Paso 11: Ejecución de la aplicación en el emulador con el indicador de progreso activo y verificación en Logcat ("1. Servicio iniciado").]
 
+*Pruebas de Integrante 2*
+
+#captura(
+  ruta: (
+    "../../img/propuesta2/re-1.png",
+    "../../img/propuesta2/re-1.2.png",
+  ),
+  columns: (1fr, 2fr),
+  grid-width: 80%,
+)[Paso 11 (Integrante 2): Ejecución de la aplicación en el emulador con el indicador de progreso activo y verificación en Logcat ("1. Servicio iniciado").]
+
+]
 == Paso 12. Confirmar sincronización y recepción del Broadcast
 
 Esperar a que termine la coroutine (unos 3 segundos) y confirmar que en Logcat aparecen "2. Aviso enviado" y "3. Aviso recibido en la pantalla", y que la UI reemplaza el indicador por el mensaje recibido mediante el BroadcastReceiver.
 
+#pad(1.1em)[
+*Pruebas de Integrante 1*
 #captura(
   ruta: (
     "../../img/resuelto/paso-11.2.png",
@@ -139,3 +154,18 @@ Esperar a que termine la coroutine (unos 3 segundos) y confirmar que en Logcat a
   columns: (1fr, 2fr),
   grid-width: 80%,
 )[Paso 12: Confirmación en Logcat de la finalización de la coroutine y actualización reactiva de la UI mediante el BroadcastReceiver.]
+
+
+*Pruebas de Integrante 2*
+
+#captura(
+  ruta: (
+    "../../img/propuesta2/re-2.png",
+    "../../img/propuesta2/re-3.png",
+  ),
+  columns: (1fr, 2fr),
+  grid-width: 80%,
+)[Paso 12 (Integrante 2): Confirmación en Logcat de la finalización de la coroutine y actualización reactiva de la UI mediante el BroadcastReceiver.]
+
+]
+

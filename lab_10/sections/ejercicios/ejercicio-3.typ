@@ -1,15 +1,19 @@
 = 3. Registra un segundo BroadcastReceiver que escuche una acción distinta (por ejemplo "com.tuapp.ACCION_SYNC_ERROR") y simula un caso de error en el Service (por ejemplo, con una probabilidad aleatoria), mostrando un mensaje distinto en la UI.
 
+#pad(1.1em)[
+
 Se introdujo la acción de difusión `ACCION_SYNC_ERROR` para simular y canalizar fallos de sincronización. Antes de consultar Room, el servicio evalúa una probabilidad del 30 % (`Random.nextInt(100) < 30`); de cumplirse, emite el broadcast con el extra `mensaje_error`, escribe en Logcat y ejecuta `stopSelf()` sin modificar la base de datos. En la UI, un segundo `BroadcastReceiver` captura la señal, apaga el indicador de carga y muestra el mensaje de error.
 
 === Cambios Realizados
+#pad(left:1.1em)[
 
-- *Archivo modificado:* `app/.../MainActivity.kt`
+*Archivo modificado:* MainActivity.kt
 1. *Acción adicional:* Definición de `ACCION_SYNC_ERROR` junto a `ACCION_SYNC_LISTA`.
 2. *Fallo en segundo plano (30 %):* Al dispararse, envía el broadcast con `mensaje_error` y sale con `stopSelf()`.
 3. *Segundo receptor reactivo:* `receiverError` (`RECEIVER_NOT_EXPORTED`) actualiza `resultado` y apaga `enCurso`.
 4. *Ciclo de vida y consistencia:* Ambos receptores se desregistran en `onDispose` y los 4 edificios siguen *Pendiente*.
 
+]
 === Código Implementado
 
 ```kotlin
@@ -61,3 +65,6 @@ onDispose {
   image("../../img/propuestos/ejercicio-3.png", width: 45%),
   caption: [Emulador reflejando el mensaje de error capturado por el segundo receptor; nótese que los edificios permanecen en estado "Pendiente".],
 )
+
+
+]

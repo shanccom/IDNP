@@ -1,4 +1,5 @@
 = 2. Modifica el Service para que, en lugar de un resultado simulado, recorra la lista de edificios persistida en Room (Laboratorio 09) y "sincronice" (por ejemplo, marque como actualizados) los que cumplan una condición, enviando el conteo real por el broadcast.
+#pad(1.1em)[
 
 Se sustituyó la sincronización simulada por una persistencia real con Room (reutilizando el esquema del Laboratorio 09), sincronizando únicamente aquellos edificios con `sincronizado == false` y reportando métricas reales a la UI.
 
@@ -115,3 +116,6 @@ resultado = if (revisados == 0) {
   ),
   caption: [Ciclo de vida y sincronización real con Room: (a) 4 edificios pendientes, (b) sincronización en curso con indicador y botón de detención, (c) primera sincronización (4 de 4 actualizados), y (d) segunda sincronización sin registros pendientes.],
 )
+
+
+]
