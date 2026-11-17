@@ -1,3 +1,5 @@
-= Pregunta 2
+= 2. ¿Por qué es obligatorio mostrar una notificación en un Foreground Service, a diferencia de un started Service como el del Laboratorio 10? Explica qué problema busca evitar esta restricción del sistema operativo.
 
-Respuesta de la segunda pregunta, redactada por el integrante encargado.
+La diferencia clave está en el compromiso de recursos y la prioridad en el sistema. En el Laboratorio 10, el *started Service* ejecutaba una tarea puntual y breve que trabajaba en silencio, pero con el riesgo de que Android lo cerrara en cualquier momento si escaseaba la memoria. En cambio, un *Foreground Service* se reserva para tareas continuas que el usuario percibe directamente (como reproducir audio); por eso, el sistema operativo le otorga máxima prioridad frente al gestor de memoria y evita matarlo.
+
+Esta restricción busca evitar el problema de las *aplicaciones "vampiro" o abusivas*, que ejecutan procesos pesados en segundo plano sin que el usuario lo note, drenando la batería, consumiendo CPU o invadiendo la privacidad. La notificación persistente actúa como un pacto de transparencia: Android le da a la app el privilegio de mantenerse viva, pero a cambio exige que el usuario siempre esté enterado de ese consumo y conserve el control directo para pausarlo o finalizarlo.

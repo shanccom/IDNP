@@ -1,12 +1,13 @@
 #import "template.typ": unsa-report
 
 #show: unsa-report.with(
-  course_name: "Nombre del Curso",
-  lab_title: "Práctica 01",
+  course_name: "INTRODUCCION AL DESARROLLO DE NUEVAS PLATAFORMAS (E)",
+  lab_title: "Reproductor de audio-guía con Foreground Service en Jetpack Compose",
   lab_number: "01",
-  instructor_name: "Nombre del Docente",
+  instructor_name: "Mg Roxana Evelyn Limache Calatayud",
   members: (
-    "Nombre del Estudiante",
+    "Hancco Mullisaca, Sergio Danilo",
+    "Huacani Jara, Denise Andrea",
   ),
 )
 
