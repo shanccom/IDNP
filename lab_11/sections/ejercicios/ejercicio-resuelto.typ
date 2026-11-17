@@ -1,22 +1,21 @@
 = Ejercicio Resuelto por el Docente: Audio-Guía con Foreground Service
 
-A continuación se detallan, paso a paso, las instrucciones para implementar un reproductor de audio-guía (narración sobre un edificio del campus) que se ejecuta como *Foreground Service*. También puede apoyarse en el siguiente video tutorial:
+A continuación se detallan, paso a paso, las instrucciones para implementar un reproductor de audio-guía que se ejecuta como *Foreground Service*. También puede apoyarse en el siguiente video tutorial:
 
-- *Video de referencia:* "ANDROID - FOREGROUND SERVICE ~ WITH NOTIFICATION AND BACKGROUND TASK || KOTLIN" \
-  #link("https://www.youtube.com/watch?v=-45jGLtbhPQ")
+- *Video de referencia:* "ANDROID - FOREGROUND SERVICE ~ WITH NOTIFICATION AND BACKGROUND TASK || KOTLIN"  #link("https://www.youtube.com/watch?v=-45jGLtbhPQ")
 
 #v(0.4em)
 
 == Paso 1. Crear un nuevo proyecto
 
-Nombre sugerido para el proyecto: `AudioGuiaForeground_Compose`, Package name: `com.example.audioguiaforeground_compose`, Language: `Kotlin`, Minimum SDK: el que venga por defecto en la plantilla (recuerden usar un emulador o dispositivo con API 34 o superior, según la sección de Recursos a utilizar).
+Nombre sugerido para el proyecto: `AudioGuiaForeground_Compose`.
 
 #figure(
   image("../../img/resuelto/paso-1.png", width: 42%),
   caption: [Paso 1: Creación y configuración inicial del proyecto en Android Studio.],
 )
 
-#v(0.4em)
+#v(0.1em)
 
 == Paso 2. Configurar AndroidManifest.xml y dependencias en build.gradle.kts
 
@@ -74,7 +73,7 @@ Sobrescribir `onCreate()`, creando el `NotificationChannel` requerido desde Andr
 Definir la función `construirNotificacion(titulo)`, que arma la notificación persistente que exige un *Foreground Service*.
 
 #figure(
-  image("../../img/resuelto/paso-6.png", width: 58%),
+  image("../../img/resuelto/paso-6.png", width: 55%),
   caption: [Paso 6: Función construirNotificacion con NotificationCompat.Builder y setOngoing(true).],
 )
 
@@ -85,7 +84,7 @@ Definir la función `construirNotificacion(titulo)`, que arma la notificación p
 Sobrescribir `onStartCommand()`, leyendo la acción del `Intent` recibido: al reproducir, llamar a `startForeground()` con la notificación; al pausar, cancelar el avance; al detener, cancelar el avance y finalizar el `Service`.
 
 #figure(
-  image("../../img/resuelto/paso-7.png", width: 60%),
+  image("../../img/resuelto/paso-7.png", width: 55%),
   caption: [Paso 7: Manejo de acciones en onStartCommand() y llamada a startForeground().],
 )
 
@@ -107,7 +106,7 @@ Definir la función `iniciarAvance()`, que simula con una coroutine el avance de
 Crear el Composable `PantallaAudioGuia`, obteniendo el contexto actual y dos variables de estado: si se está reproduciendo y si la app está en segundo plano. Por ahora dejamos el resto del cuerpo vacío.
 
 #figure(
-  image("../../img/resuelto/paso-9.png", width: 58%),
+  image("../../img/resuelto/paso-9.png", width: 55%),
   caption: [Paso 9: Creación de PantallaAudioGuia y variables de estado reactivo.],
 )
 
@@ -115,7 +114,7 @@ Crear el Composable `PantallaAudioGuia`, obteniendo el contexto actual y dos var
 
 == Paso 10. Registrar el observador con ProcessLifecycleOwner
 
-Dentro de un `DisposableEffect(Unit)`, registrar un observador sobre `ProcessLifecycleOwner` que, cuando la app pasa a segundo plano (`ON_STOP`), marque `enSegundoPlano` en `true`, y cuando vuelve a primer plano (`ON_START`), lo marque en `false`, siguiendo el flujo del ciclo de vida de la aplicación.
+Dentro de un `DisposableEffect(Unit)`, registrar un observador sobre `ProcessLifecycleOwner` que, cuando la app pasa a segundo plano (`ON_STOP`), marque `enSegundoPlano` en `true`.
 
 #figure(
   image("../../img/resuelto/paso-10.png", width: 55%),
@@ -126,7 +125,7 @@ Dentro de un `DisposableEffect(Unit)`, registrar un observador sobre `ProcessLif
 
 == Paso 11. Implementar controles de interfaz y diseño visual
 
-Agregar los botones *Reproducir*, *Pausar* y *Detener*, cada uno llamando a `context.startService()` con la acción correspondiente, y un texto que refleje el estado actual. Con esto, `PantallaAudioGuia` queda completo. Se agrega `statusBarsPadding()` al `Column` para que el texto y los botones no queden debajo de la barra de estado ni de la cámara del dispositivo.
+Agregar los botones *Reproducir*, *Pausar* y *Detener*, cada uno llamando a `context.startService()`. Con esto, `PantallaAudioGuia` queda completo. Se agrega `statusBarsPadding()` al `Column` para que el texto y los botones no queden debajo de la barra de estado ni de la cámara del dispositivo.
 
 #figure(
   image("../../img/resuelto/paso-11.png", width: 30%),
@@ -149,6 +148,8 @@ Dentro de `MainActivity`, en el bloque `setContent`, mostrar `PantallaAudioGuia`
 == Paso 13. Ejecución, pruebas y verificación en emulador
 
 Ejecutar la aplicación en un emulador, presionar "Reproducir" y, sin cerrar la app, presionar el botón Home para pasarla a segundo plano; verificar que aparece la notificación persistente con el título del edificio. Si la notificación no aparece, activar los permisos de notificaciones de la aplicación en el emulador: *Ajustes (Settings) → Apps → AudioGuiaForeground_Compose → Notificaciones*, y activar todas las notificaciones de la app; luego volver a presionar "Reproducir".
+#v(0.4em)
+*Integrante 1:*
 
 #grid(
   columns: (1fr, 1fr, 1fr),
@@ -156,14 +157,34 @@ Ejecutar la aplicación en un emulador, presionar "Reproducir" y, sin cerrar la 
   align: bottom + center,
   figure(
     image("../../img/resuelto/paso-13.1.png", width: 80%),
-    caption: [13.1: Reproduciendo audio-guía.],
+    caption: [Reproduciendo audio-guía.],
   ),
   figure(
     image("../../img/resuelto/paso-13.2.png", width: 80%),
-    caption: [13.2: Detección en 2do plano.],
+    caption: [Detección en 2do plano.],
   ),
   figure(
     image("../../img/resuelto/paso-13.3.png", width: 60%),
-    caption: [13.3: Notificación persistente.],
+    caption: [Notificación persistente.],
+  ),
+)
+#v(0.1em)
+*Integrante 2:*
+
+#grid(
+  columns: (1fr, 1fr, 1fr),
+  gutter: 0.8em,
+  align: bottom + center,
+  figure(
+    image("../../img/propuesta2/re01.png", width: 70%),
+    caption: [Ejecución de la app e inicio de reproducción.],
+  ),
+  figure(
+    image("../../img/propuesta2/re02.png", width: 70%),
+    caption: [Activación de permisos de notificación en Ajustes.],
+  ),
+  figure(
+    image("../../img/propuesta2/re03.png", width: 70%),
+    caption: [Verificación de la notificación persistente en 2do plano.],
   ),
 )

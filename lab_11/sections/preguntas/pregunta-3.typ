@@ -27,9 +27,7 @@ La diferencia principal radica en que el video de referencia utiliza un enfoque 
 
     #v(0.4em)
     #figure(
-      rect(width: 100%, height: 3.2cm, stroke: 0.5pt + gray, radius: 2pt)[
-        #align(center + horizon)[_Captura de comentario — Denise_]
-      ],
+      image("/assets/image-13.png"),
       caption: [Comentario en YouTube (Integrante 2).],
     )
   ]

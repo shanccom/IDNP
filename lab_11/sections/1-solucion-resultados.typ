@@ -8,8 +8,12 @@
 
       Link repositorio 1: https://github.com/shanccom/IDNP_Repo/tree/main/Lab11AudioGuiaForeground_Compose
 
+Link repositorio 2: https://github.com/DeniseHuacani/IDNP-LABORATORIO/tree/main/lab11/AudioGuiaForeground_Compose
+
       #include "ejercicios/ejercicio-resuelto.typ"
       #v(0.8em)
+      = Ejercicio Propuesto 
+      == Propuesta 1: 
       #include "ejercicios/ejercicio-1.typ"
       #v(0.6em)
       #include "ejercicios/ejercicio-2.typ"
@@ -17,6 +21,10 @@
       #include "ejercicios/ejercicio-3.typ"
       #v(0.6em)
       #include "ejercicios/ejercicio-4.typ"
+
+      == Propuesta 2:
+      #v(0.6em )
+      #include "ejercicios/propuesta2/ejerciciopropuesto.typ"
     ]
   ],
   [
