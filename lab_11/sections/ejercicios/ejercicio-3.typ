@@ -26,7 +26,6 @@ interface UltimoEdificioDao {
 
     @Query("SELECT nombre FROM ultimo_edificio WHERE id = 1 LIMIT 1")
     suspend fun obtenerNombre(): String?
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun guardar(ultimo: UltimoEdificioEntity)
 }

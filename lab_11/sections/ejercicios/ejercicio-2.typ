@@ -54,7 +54,7 @@ A continuación se presentan las capturas registradas en el emulador que demuest
     caption: [Reproducción activa en la interfaz de la aplicación.]
   ),
   figure(
-    image("../../img/propuesto/paso-2.2.png", width: 85%),
+    image("../../img/propuesto/paso-2.2.png", width: 80%),
     caption: [Ejecución en segundo plano con ícono en la barra de estado.]
   )
 )

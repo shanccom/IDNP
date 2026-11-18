@@ -16,7 +16,6 @@ Con `setOnCompletionListener` se atiende el final natural de la narración: se l
 
 ```kotlin
 private var reproductor: MediaPlayer? = null
-
 private fun iniciarAudio() {
     if (reproductor == null) {
         reproductor = MediaPlayer.create(
@@ -28,13 +27,11 @@ private fun iniciarAudio() {
     }
     reproductor?.start()
 }
-
 private fun pausarAudio() {
     reproductor?.let {
         if (it.isPlaying) it.pause()
     }
 }
-
 private fun detenerAudio() {
     reproductor?.let {
         if (it.isPlaying) it.stop()
@@ -42,7 +39,6 @@ private fun detenerAudio() {
     }
     reproductor = null
 }
-
 private fun finalizarAudio() {
     detenerAudio()
     stopForeground(STOP_FOREGROUND_REMOVE)
@@ -57,13 +53,11 @@ ACCION_REPRODUCIR -> {
     pausado = false
     iniciarAudio()
 }
-
 ACCION_PAUSAR -> {
     pausarAudio()
     pausado = true
     actualizarNotificacion()
 }
-
 ACCION_DETENER -> {
     detenerAudio()
     stopForeground(STOP_FOREGROUND_REMOVE)

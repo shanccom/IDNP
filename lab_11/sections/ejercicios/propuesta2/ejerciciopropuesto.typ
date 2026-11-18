@@ -18,7 +18,8 @@
   caption: caption,
 )
 
-= 1. Agrega un botón "Siguiente edificio" que cambie al siguiente edificio de la lista (los del Laboratorio 08) y muestre su nombre en el título de la notificación.
+== 1. Agrega un botón "Siguiente edificio" que cambie al siguiente edificio de la lista (los del Laboratorio 08) y muestre su nombre en el título de la notificación.
+== Desarrollo
 
 #pad(1.1em)[
 
@@ -85,7 +86,9 @@ Button(onClick = {
 )
 
 ]
-= 2. Agrega los botones "Pausar" y "Detener" dentro de la notificación, para controlar la reproducción sin abrir la app (pista: usa addAction en el NotificationCompat.Builder).
+== 2. Agrega los botones "Pausar" y "Detener" dentro de la notificación, para controlar la reproducción sin abrir la app (pista: usa addAction en el NotificationCompat.Builder).
+
+== Desarrollo
 
 #pad(1.1em)[
 
@@ -156,8 +159,9 @@ ACCION_PAUSAR -> {
 )
 
 ]
-= 3. Usando Room (Laboratorio 09), guarda cuál fue el último edificio reproducido. Cuando se abra la app de nuevo, muestra un botón "Continuar" que retome ese edificio.
+== 3. Usando Room (Laboratorio 09), guarda cuál fue el último edificio reproducido. Cuando se abra la app de nuevo, muestra un botón "Continuar" que retome ese edificio.
 
+== Desarrollo
 #pad(1.1em)[
 
 Para guardar el último edificio usé Room con una tabla de una sola fila (`UltimoEdificioEntity`, con `id = 1`) que guarda el índice del edificio. Con `OnConflictStrategy.REPLACE`, cada vez que se guarda se reemplaza la fila anterior. El Service guarda el edificio al reproducir y cuando se cambia de edificio con «Siguiente», y para eso le agregué su propio `scope`.
@@ -224,19 +228,23 @@ if (nombreGuardado != null && !EstadoAudioGuia.reproduciendo) {
     ruta: "/assets/image-7.png",
     width: 70%,
   )[Paso 3 (b): al abrir la app de nuevo aparece el botón «Continuar» con ese edificio.],
-  captura(
-    ruta: "/assets/image-8.png",
-    width: 70%,
-  )[Paso 3 (c): después de pulsar «Continuar», se retoma el edificio guardado.],
-  captura(
-    ruta: "/assets/image-9.png",
-    width: 70%,
-  )[Paso 3 (d): Database Inspector con la fila guardada en `UltimoEdificioEntity`.],
+  
+  
 )
 
-]
-= 4. Haz que la audio-guía suene de verdad: agrega un archivo de audio corto (.mp3) en la carpeta res/raw y reprodúcelo con MediaPlayer dentro de AudioGuiaService. "Reproducir" inicia el audio, "Pausar" lo pausa y "Detener" lo detiene.
+#captura(
+    ruta: "/assets/image-8.png",
+    width: 40%,
+  )[Paso 3 (c): después de pulsar «Continuar», se retoma el edificio guardado.],
 
+#captura(
+    ruta: "/assets/image-9.png",
+    width: 80%,
+  )[Paso 3 (d): Database Inspector con la fila guardada en `UltimoEdificioEntity`.],
+]
+== 4. Haz que la audio-guía suene de verdad: agrega un archivo de audio corto (.mp3) en la carpeta res/raw y reprodúcelo con MediaPlayer dentro de AudioGuiaService. "Reproducir" inicia el audio, "Pausar" lo pausa y "Detener" lo detiene.
+
+== Desarrollo
 #pad(1.1em)[
 
 Agregué un audio corto en `app/src/main/res/raw/audioguia.mp3` (el nombre va en minúsculas y sin espacios, porque Android lo convierte en `R.raw.audioguia`). En el Service quité la coroutine que simulaba el avance y puse un `MediaPlayer`: «Reproducir» lo crea con `MediaPlayer.create(this, R.raw.audioguia)` y llama a `start()`, «Pausar» llama a `pause()` y «Detener» lo libera con `release()`. Al reanudar, el audio continúa por donde se quedó.
