@@ -50,11 +50,11 @@ A continuación se presentan las capturas registradas en el emulador que demuest
   gutter: 1em,
   align: horizon + center,
   figure(
-    image("../../img/propuesto/paso-2.1.png", width: 85%),
+    image("../../img/propuesto/paso-2.1.png", width: 75%),
     caption: [Reproducción activa en la interfaz de la aplicación.]
   ),
   figure(
-    image("../../img/propuesto/paso-2.2.png", width: 80%),
+    image("../../img/propuesto/paso-2.2.png", width: 70%),
     caption: [Ejecución en segundo plano con ícono en la barra de estado.]
   )
 )
@@ -66,11 +66,11 @@ A continuación se presentan las capturas registradas en el emulador que demuest
   gutter: 1em,
   align: horizon + center,
   figure(
-    image("../../img/propuesto/paso-2.3.png", width: 75%),
+    image("../../img/propuesto/paso-2.3.png", width: 60%),
     caption: [Notificación persistente con botones interactivos "Pausar" y "Detener".]
   ),
   figure(
-    image("../../img/propuesto/paso-2.4.png", width: 75%),
+    image("../../img/propuesto/paso-2.4.png", width: 60%),
     caption: [Transición inmediata a "Audio-guía en pausa" sin abrir la app.]
   )
 )
